@@ -175,6 +175,7 @@ ThanosRuler defines a ThanosRuler deployment.
       * [`fn withMedium(medium)`](#fn-specstorageemptydirwithmedium)
       * [`fn withSizeLimit(sizeLimit)`](#fn-specstorageemptydirwithsizelimit)
     * [`obj spec.storage.volumeClaimTemplate`](#obj-specstoragevolumeclaimtemplate)
+      * [`fn withApiVersion(apiVersion)`](#fn-specstoragevolumeclaimtemplatewithapiversion)
       * [`fn withKind(kind)`](#fn-specstoragevolumeclaimtemplatewithkind)
       * [`obj spec.storage.volumeClaimTemplate.metadata`](#obj-specstoragevolumeclaimtemplatemetadata)
         * [`fn withAnnotations(annotations)`](#fn-specstoragevolumeclaimtemplatemetadatawithannotations)
@@ -1512,6 +1513,14 @@ Total amount of local storage required for this EmptyDir volume. The size limit 
 ## obj spec.storage.volumeClaimTemplate
 
 A PVC spec to be used by the Prometheus StatefulSets.
+
+### fn spec.storage.volumeClaimTemplate.withApiVersion
+
+```ts
+withApiVersion(apiVersion)
+```
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 ### fn spec.storage.volumeClaimTemplate.withKind
 
