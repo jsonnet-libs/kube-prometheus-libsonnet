@@ -4,7 +4,7 @@ permalink: /0.8/monitoring/v1/probe/
 
 # monitoring.v1.probe
 
-Probe defines monitoring for a set of static targets or ingresses.
+"Probe defines monitoring for a set of static targets or ingresses."
 
 ## Index
 
@@ -111,7 +111,7 @@ new returns an instance of Probe
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -119,7 +119,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -127,7 +127,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -137,7 +137,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -145,7 +145,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -153,7 +153,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -161,7 +161,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -169,7 +169,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -177,7 +177,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -187,11 +187,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -199,7 +195,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -207,7 +203,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -215,7 +211,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -225,7 +221,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -233,7 +229,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -243,7 +239,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -251,9 +247,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -261,7 +255,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -269,7 +263,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -279,9 +273,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -289,9 +281,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -299,13 +289,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-Specification of desired Ingress selection for target discovery by Prometheus.
+"Specification of desired Ingress selection for target discovery by Prometheus."
 
 ### fn spec.withInterval
 
@@ -313,7 +301,7 @@ Specification of desired Ingress selection for target discovery by Prometheus.
 withInterval(interval)
 ```
 
-Interval at which targets are probed using the configured prober. If not specified Prometheus' global scrape interval is used.
+"Interval at which targets are probed using the configured prober. If not specified Prometheus' global scrape interval is used."
 
 ### fn spec.withJobName
 
@@ -321,7 +309,7 @@ Interval at which targets are probed using the configured prober. If not specifi
 withJobName(jobName)
 ```
 
-The job name assigned to scraped metrics by default.
+"The job name assigned to scraped metrics by default."
 
 ### fn spec.withModule
 
@@ -329,7 +317,7 @@ The job name assigned to scraped metrics by default.
 withModule(module)
 ```
 
-The module to use for probing specifying how to probe the target. Example module configuring in the blackbox exporter: https://github.com/prometheus/blackbox_exporter/blob/master/example.yml
+"The module to use for probing specifying how to probe the target. Example module configuring in the blackbox exporter: https://github.com/prometheus/blackbox_exporter/blob/master/example.yml"
 
 ### fn spec.withScrapeTimeout
 
@@ -337,15 +325,15 @@ The module to use for probing specifying how to probe the target. Example module
 withScrapeTimeout(scrapeTimeout)
 ```
 
-Timeout for scraping metrics from the Prometheus exporter.
+"Timeout for scraping metrics from the Prometheus exporter."
 
 ## obj spec.basicAuth
 
-BasicAuth allow an endpoint to authenticate over basic authentication. More info: https://prometheus.io/docs/operating/configuration/#endpoint
+"BasicAuth allow an endpoint to authenticate over basic authentication. More info: https://prometheus.io/docs/operating/configuration/#endpoint"
 
 ## obj spec.basicAuth.password
 
-The secret in the service monitor namespace that contains the password for authentication.
+"The secret in the service monitor namespace that contains the password for authentication."
 
 ### fn spec.basicAuth.password.withKey
 
@@ -353,7 +341,7 @@ The secret in the service monitor namespace that contains the password for authe
 withKey(key)
 ```
 
-The key of the secret to select from.  Must be a valid secret key.
+"The key of the secret to select from.  Must be a valid secret key."
 
 ### fn spec.basicAuth.password.withName
 
@@ -361,7 +349,7 @@ The key of the secret to select from.  Must be a valid secret key.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.basicAuth.password.withOptional
 
@@ -369,11 +357,11 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the Secret or its key must be defined
+"Specify whether the Secret or its key must be defined"
 
 ## obj spec.basicAuth.username
 
-The secret in the service monitor namespace that contains the username for authentication.
+"The secret in the service monitor namespace that contains the username for authentication."
 
 ### fn spec.basicAuth.username.withKey
 
@@ -381,7 +369,7 @@ The secret in the service monitor namespace that contains the username for authe
 withKey(key)
 ```
 
-The key of the secret to select from.  Must be a valid secret key.
+"The key of the secret to select from.  Must be a valid secret key."
 
 ### fn spec.basicAuth.username.withName
 
@@ -389,7 +377,7 @@ The key of the secret to select from.  Must be a valid secret key.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.basicAuth.username.withOptional
 
@@ -397,11 +385,11 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the Secret or its key must be defined
+"Specify whether the Secret or its key must be defined"
 
 ## obj spec.bearerTokenSecret
 
-Secret to mount to read bearer token for scraping targets. The secret needs to be in the same namespace as the probe and accessible by the Prometheus Operator.
+"Secret to mount to read bearer token for scraping targets. The secret needs to be in the same namespace as the probe and accessible by the Prometheus Operator."
 
 ### fn spec.bearerTokenSecret.withKey
 
@@ -409,7 +397,7 @@ Secret to mount to read bearer token for scraping targets. The secret needs to b
 withKey(key)
 ```
 
-The key of the secret to select from.  Must be a valid secret key.
+"The key of the secret to select from.  Must be a valid secret key."
 
 ### fn spec.bearerTokenSecret.withName
 
@@ -417,7 +405,7 @@ The key of the secret to select from.  Must be a valid secret key.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.bearerTokenSecret.withOptional
 
@@ -425,11 +413,11 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the Secret or its key must be defined
+"Specify whether the Secret or its key must be defined"
 
 ## obj spec.prober
 
-Specification for the prober to use for probing targets. The prober.URL parameter is required. Targets cannot be probed if left empty.
+"Specification for the prober to use for probing targets. The prober.URL parameter is required. Targets cannot be probed if left empty."
 
 ### fn spec.prober.withPath
 
@@ -437,7 +425,7 @@ Specification for the prober to use for probing targets. The prober.URL paramete
 withPath(path)
 ```
 
-Path to collect metrics from. Defaults to `/probe`.
+"Path to collect metrics from. Defaults to `/probe`."
 
 ### fn spec.prober.withScheme
 
@@ -445,7 +433,7 @@ Path to collect metrics from. Defaults to `/probe`.
 withScheme(scheme)
 ```
 
-HTTP scheme to use for scraping. Defaults to `http`.
+"HTTP scheme to use for scraping. Defaults to `http`."
 
 ### fn spec.prober.withUrl
 
@@ -453,15 +441,15 @@ HTTP scheme to use for scraping. Defaults to `http`.
 withUrl(url)
 ```
 
-Mandatory URL of the prober.
+"Mandatory URL of the prober."
 
 ## obj spec.targets
 
-Targets defines a set of static and/or dynamically discovered targets to be probed using the prober.
+"Targets defines a set of static and/or dynamically discovered targets to be probed using the prober."
 
 ## obj spec.targets.ingress
 
-Ingress defines the set of dynamically discovered ingress objects which hosts are considered for probing.
+"Ingress defines the set of dynamically discovered ingress objects which hosts are considered for probing."
 
 ### fn spec.targets.ingress.withRelabelingConfigs
 
@@ -469,7 +457,7 @@ Ingress defines the set of dynamically discovered ingress objects which hosts ar
 withRelabelingConfigs(relabelingConfigs)
 ```
 
-RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+"RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
 
 ### fn spec.targets.ingress.withRelabelingConfigsMixin
 
@@ -477,13 +465,13 @@ RelabelConfigs to apply to samples before ingestion. More info: https://promethe
 withRelabelingConfigsMixin(relabelingConfigs)
 ```
 
-RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+"RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.targets.ingress.namespaceSelector
 
-Select Ingress objects by namespace.
+"Select Ingress objects by namespace."
 
 ### fn spec.targets.ingress.namespaceSelector.withAny
 
@@ -491,7 +479,7 @@ Select Ingress objects by namespace.
 withAny(any)
 ```
 
-Boolean describing whether all namespaces are selected in contrast to a list restricting them.
+"Boolean describing whether all namespaces are selected in contrast to a list restricting them."
 
 ### fn spec.targets.ingress.namespaceSelector.withMatchNames
 
@@ -499,7 +487,7 @@ Boolean describing whether all namespaces are selected in contrast to a list res
 withMatchNames(matchNames)
 ```
 
-List of namespace names.
+"List of namespace names."
 
 ### fn spec.targets.ingress.namespaceSelector.withMatchNamesMixin
 
@@ -507,13 +495,13 @@ List of namespace names.
 withMatchNamesMixin(matchNames)
 ```
 
-List of namespace names.
+"List of namespace names."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.targets.ingress.selector
 
-Select Ingress objects by labels.
+"Select Ingress objects by labels."
 
 ### fn spec.targets.ingress.selector.withMatchExpressions
 
@@ -521,7 +509,7 @@ Select Ingress objects by labels.
 withMatchExpressions(matchExpressions)
 ```
 
-matchExpressions is a list of label selector requirements. The requirements are ANDed.
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
 
 ### fn spec.targets.ingress.selector.withMatchExpressionsMixin
 
@@ -529,7 +517,7 @@ matchExpressions is a list of label selector requirements. The requirements are 
 withMatchExpressionsMixin(matchExpressions)
 ```
 
-matchExpressions is a list of label selector requirements. The requirements are ANDed.
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -539,7 +527,7 @@ matchExpressions is a list of label selector requirements. The requirements are 
 withMatchLabels(matchLabels)
 ```
 
-matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.targets.ingress.selector.withMatchLabelsMixin
 
@@ -547,13 +535,13 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 withMatchLabelsMixin(matchLabels)
 ```
 
-matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.targets.staticConfig
 
-StaticConfig defines static targets which are considers for probing. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#static_config.
+"StaticConfig defines static targets which are considers for probing. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#static_config."
 
 ### fn spec.targets.staticConfig.withLabels
 
@@ -561,7 +549,7 @@ StaticConfig defines static targets which are considers for probing. More info: 
 withLabels(labels)
 ```
 
-Labels assigned to all metrics scraped from the targets.
+"Labels assigned to all metrics scraped from the targets."
 
 ### fn spec.targets.staticConfig.withLabelsMixin
 
@@ -569,7 +557,7 @@ Labels assigned to all metrics scraped from the targets.
 withLabelsMixin(labels)
 ```
 
-Labels assigned to all metrics scraped from the targets.
+"Labels assigned to all metrics scraped from the targets."
 
 **Note:** This function appends passed data to existing values
 
@@ -579,7 +567,7 @@ Labels assigned to all metrics scraped from the targets.
 withRelabelingConfigs(relabelingConfigs)
 ```
 
-RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+"RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
 
 ### fn spec.targets.staticConfig.withRelabelingConfigsMixin
 
@@ -587,7 +575,7 @@ RelabelConfigs to apply to samples before ingestion. More info: https://promethe
 withRelabelingConfigsMixin(relabelingConfigs)
 ```
 
-RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+"RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
 
 **Note:** This function appends passed data to existing values
 
@@ -597,7 +585,7 @@ RelabelConfigs to apply to samples before ingestion. More info: https://promethe
 withStatic(static)
 ```
 
-Targets is a list of URLs to probe using the configured prober.
+"Targets is a list of URLs to probe using the configured prober."
 
 ### fn spec.targets.staticConfig.withStaticMixin
 
@@ -605,13 +593,13 @@ Targets is a list of URLs to probe using the configured prober.
 withStaticMixin(static)
 ```
 
-Targets is a list of URLs to probe using the configured prober.
+"Targets is a list of URLs to probe using the configured prober."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.tlsConfig
 
-TLS configuration to use when scraping the endpoint.
+"TLS configuration to use when scraping the endpoint."
 
 ### fn spec.tlsConfig.withInsecureSkipVerify
 
@@ -619,7 +607,7 @@ TLS configuration to use when scraping the endpoint.
 withInsecureSkipVerify(insecureSkipVerify)
 ```
 
-Disable target certificate validation.
+"Disable target certificate validation."
 
 ### fn spec.tlsConfig.withServerName
 
@@ -627,15 +615,15 @@ Disable target certificate validation.
 withServerName(serverName)
 ```
 
-Used to verify the hostname for the targets.
+"Used to verify the hostname for the targets."
 
 ## obj spec.tlsConfig.ca
 
-Struct containing the CA cert to use for the targets.
+"Struct containing the CA cert to use for the targets."
 
 ## obj spec.tlsConfig.ca.configMap
 
-ConfigMap containing data to use for the targets.
+"ConfigMap containing data to use for the targets."
 
 ### fn spec.tlsConfig.ca.configMap.withKey
 
@@ -643,7 +631,7 @@ ConfigMap containing data to use for the targets.
 withKey(key)
 ```
 
-The key to select.
+"The key to select."
 
 ### fn spec.tlsConfig.ca.configMap.withName
 
@@ -651,7 +639,7 @@ The key to select.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.tlsConfig.ca.configMap.withOptional
 
@@ -659,11 +647,11 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the ConfigMap or its key must be defined
+"Specify whether the ConfigMap or its key must be defined"
 
 ## obj spec.tlsConfig.ca.secret
 
-Secret containing data to use for the targets.
+"Secret containing data to use for the targets."
 
 ### fn spec.tlsConfig.ca.secret.withKey
 
@@ -671,7 +659,7 @@ Secret containing data to use for the targets.
 withKey(key)
 ```
 
-The key of the secret to select from.  Must be a valid secret key.
+"The key of the secret to select from.  Must be a valid secret key."
 
 ### fn spec.tlsConfig.ca.secret.withName
 
@@ -679,7 +667,7 @@ The key of the secret to select from.  Must be a valid secret key.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.tlsConfig.ca.secret.withOptional
 
@@ -687,15 +675,15 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the Secret or its key must be defined
+"Specify whether the Secret or its key must be defined"
 
 ## obj spec.tlsConfig.cert
 
-Struct containing the client cert file for the targets.
+"Struct containing the client cert file for the targets."
 
 ## obj spec.tlsConfig.cert.configMap
 
-ConfigMap containing data to use for the targets.
+"ConfigMap containing data to use for the targets."
 
 ### fn spec.tlsConfig.cert.configMap.withKey
 
@@ -703,7 +691,7 @@ ConfigMap containing data to use for the targets.
 withKey(key)
 ```
 
-The key to select.
+"The key to select."
 
 ### fn spec.tlsConfig.cert.configMap.withName
 
@@ -711,7 +699,7 @@ The key to select.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.tlsConfig.cert.configMap.withOptional
 
@@ -719,11 +707,11 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the ConfigMap or its key must be defined
+"Specify whether the ConfigMap or its key must be defined"
 
 ## obj spec.tlsConfig.cert.secret
 
-Secret containing data to use for the targets.
+"Secret containing data to use for the targets."
 
 ### fn spec.tlsConfig.cert.secret.withKey
 
@@ -731,7 +719,7 @@ Secret containing data to use for the targets.
 withKey(key)
 ```
 
-The key of the secret to select from.  Must be a valid secret key.
+"The key of the secret to select from.  Must be a valid secret key."
 
 ### fn spec.tlsConfig.cert.secret.withName
 
@@ -739,7 +727,7 @@ The key of the secret to select from.  Must be a valid secret key.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.tlsConfig.cert.secret.withOptional
 
@@ -747,11 +735,11 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the Secret or its key must be defined
+"Specify whether the Secret or its key must be defined"
 
 ## obj spec.tlsConfig.keySecret
 
-Secret containing the client key file for the targets.
+"Secret containing the client key file for the targets."
 
 ### fn spec.tlsConfig.keySecret.withKey
 
@@ -759,7 +747,7 @@ Secret containing the client key file for the targets.
 withKey(key)
 ```
 
-The key of the secret to select from.  Must be a valid secret key.
+"The key of the secret to select from.  Must be a valid secret key."
 
 ### fn spec.tlsConfig.keySecret.withName
 
@@ -767,7 +755,7 @@ The key of the secret to select from.  Must be a valid secret key.
 withName(name)
 ```
 
-Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.tlsConfig.keySecret.withOptional
 
@@ -775,4 +763,4 @@ Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/wo
 withOptional(optional)
 ```
 
-Specify whether the Secret or its key must be defined
+"Specify whether the Secret or its key must be defined"
