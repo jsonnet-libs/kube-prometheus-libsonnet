@@ -22,8 +22,6 @@ permalink: /0.8/monitoring/v1alpha1/alertmanagerConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -36,6 +34,518 @@ permalink: /0.8/monitoring/v1alpha1/alertmanagerConfig/
   * [`fn withInhibitRulesMixin(inhibitRules)`](#fn-specwithinhibitrulesmixin)
   * [`fn withReceivers(receivers)`](#fn-specwithreceivers)
   * [`fn withReceiversMixin(receivers)`](#fn-specwithreceiversmixin)
+  * [`obj spec.inhibitRules`](#obj-specinhibitrules)
+    * [`fn withEqual(equal)`](#fn-specinhibitruleswithequal)
+    * [`fn withEqualMixin(equal)`](#fn-specinhibitruleswithequalmixin)
+    * [`fn withSourceMatch(sourceMatch)`](#fn-specinhibitruleswithsourcematch)
+    * [`fn withSourceMatchMixin(sourceMatch)`](#fn-specinhibitruleswithsourcematchmixin)
+    * [`fn withTargetMatch(targetMatch)`](#fn-specinhibitruleswithtargetmatch)
+    * [`fn withTargetMatchMixin(targetMatch)`](#fn-specinhibitruleswithtargetmatchmixin)
+    * [`obj spec.inhibitRules.sourceMatch`](#obj-specinhibitrulessourcematch)
+      * [`fn withName(name)`](#fn-specinhibitrulessourcematchwithname)
+      * [`fn withRegex(regex)`](#fn-specinhibitrulessourcematchwithregex)
+      * [`fn withValue(value)`](#fn-specinhibitrulessourcematchwithvalue)
+    * [`obj spec.inhibitRules.targetMatch`](#obj-specinhibitrulestargetmatch)
+      * [`fn withName(name)`](#fn-specinhibitrulestargetmatchwithname)
+      * [`fn withRegex(regex)`](#fn-specinhibitrulestargetmatchwithregex)
+      * [`fn withValue(value)`](#fn-specinhibitrulestargetmatchwithvalue)
+  * [`obj spec.receivers`](#obj-specreceivers)
+    * [`fn withEmailConfigs(emailConfigs)`](#fn-specreceiverswithemailconfigs)
+    * [`fn withEmailConfigsMixin(emailConfigs)`](#fn-specreceiverswithemailconfigsmixin)
+    * [`fn withName(name)`](#fn-specreceiverswithname)
+    * [`fn withOpsgenieConfigs(opsgenieConfigs)`](#fn-specreceiverswithopsgenieconfigs)
+    * [`fn withOpsgenieConfigsMixin(opsgenieConfigs)`](#fn-specreceiverswithopsgenieconfigsmixin)
+    * [`fn withPagerdutyConfigs(pagerdutyConfigs)`](#fn-specreceiverswithpagerdutyconfigs)
+    * [`fn withPagerdutyConfigsMixin(pagerdutyConfigs)`](#fn-specreceiverswithpagerdutyconfigsmixin)
+    * [`fn withPushoverConfigs(pushoverConfigs)`](#fn-specreceiverswithpushoverconfigs)
+    * [`fn withPushoverConfigsMixin(pushoverConfigs)`](#fn-specreceiverswithpushoverconfigsmixin)
+    * [`fn withSlackConfigs(slackConfigs)`](#fn-specreceiverswithslackconfigs)
+    * [`fn withSlackConfigsMixin(slackConfigs)`](#fn-specreceiverswithslackconfigsmixin)
+    * [`fn withVictoropsConfigs(victoropsConfigs)`](#fn-specreceiverswithvictoropsconfigs)
+    * [`fn withVictoropsConfigsMixin(victoropsConfigs)`](#fn-specreceiverswithvictoropsconfigsmixin)
+    * [`fn withWebhookConfigs(webhookConfigs)`](#fn-specreceiverswithwebhookconfigs)
+    * [`fn withWebhookConfigsMixin(webhookConfigs)`](#fn-specreceiverswithwebhookconfigsmixin)
+    * [`fn withWechatConfigs(wechatConfigs)`](#fn-specreceiverswithwechatconfigs)
+    * [`fn withWechatConfigsMixin(wechatConfigs)`](#fn-specreceiverswithwechatconfigsmixin)
+    * [`obj spec.receivers.emailConfigs`](#obj-specreceiversemailconfigs)
+      * [`fn withAuthIdentity(authIdentity)`](#fn-specreceiversemailconfigswithauthidentity)
+      * [`fn withAuthUsername(authUsername)`](#fn-specreceiversemailconfigswithauthusername)
+      * [`fn withFrom(from)`](#fn-specreceiversemailconfigswithfrom)
+      * [`fn withHeaders(headers)`](#fn-specreceiversemailconfigswithheaders)
+      * [`fn withHeadersMixin(headers)`](#fn-specreceiversemailconfigswithheadersmixin)
+      * [`fn withHello(hello)`](#fn-specreceiversemailconfigswithhello)
+      * [`fn withHtml(html)`](#fn-specreceiversemailconfigswithhtml)
+      * [`fn withRequireTLS(requireTLS)`](#fn-specreceiversemailconfigswithrequiretls)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiversemailconfigswithsendresolved)
+      * [`fn withSmarthost(smarthost)`](#fn-specreceiversemailconfigswithsmarthost)
+      * [`fn withText(text)`](#fn-specreceiversemailconfigswithtext)
+      * [`fn withTo(to)`](#fn-specreceiversemailconfigswithto)
+      * [`obj spec.receivers.emailConfigs.authPassword`](#obj-specreceiversemailconfigsauthpassword)
+        * [`fn withKey(key)`](#fn-specreceiversemailconfigsauthpasswordwithkey)
+        * [`fn withName(name)`](#fn-specreceiversemailconfigsauthpasswordwithname)
+        * [`fn withOptional(optional)`](#fn-specreceiversemailconfigsauthpasswordwithoptional)
+      * [`obj spec.receivers.emailConfigs.authSecret`](#obj-specreceiversemailconfigsauthsecret)
+        * [`fn withKey(key)`](#fn-specreceiversemailconfigsauthsecretwithkey)
+        * [`fn withName(name)`](#fn-specreceiversemailconfigsauthsecretwithname)
+        * [`fn withOptional(optional)`](#fn-specreceiversemailconfigsauthsecretwithoptional)
+      * [`obj spec.receivers.emailConfigs.headers`](#obj-specreceiversemailconfigsheaders)
+        * [`fn withKey(key)`](#fn-specreceiversemailconfigsheaderswithkey)
+        * [`fn withValue(value)`](#fn-specreceiversemailconfigsheaderswithvalue)
+      * [`obj spec.receivers.emailConfigs.tlsConfig`](#obj-specreceiversemailconfigstlsconfig)
+        * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiversemailconfigstlsconfigwithinsecureskipverify)
+        * [`fn withServerName(serverName)`](#fn-specreceiversemailconfigstlsconfigwithservername)
+        * [`obj spec.receivers.emailConfigs.tlsConfig.ca`](#obj-specreceiversemailconfigstlsconfigca)
+          * [`obj spec.receivers.emailConfigs.tlsConfig.ca.configMap`](#obj-specreceiversemailconfigstlsconfigcaconfigmap)
+            * [`fn withKey(key)`](#fn-specreceiversemailconfigstlsconfigcaconfigmapwithkey)
+            * [`fn withName(name)`](#fn-specreceiversemailconfigstlsconfigcaconfigmapwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversemailconfigstlsconfigcaconfigmapwithoptional)
+          * [`obj spec.receivers.emailConfigs.tlsConfig.ca.secret`](#obj-specreceiversemailconfigstlsconfigcasecret)
+            * [`fn withKey(key)`](#fn-specreceiversemailconfigstlsconfigcasecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiversemailconfigstlsconfigcasecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversemailconfigstlsconfigcasecretwithoptional)
+        * [`obj spec.receivers.emailConfigs.tlsConfig.cert`](#obj-specreceiversemailconfigstlsconfigcert)
+          * [`obj spec.receivers.emailConfigs.tlsConfig.cert.configMap`](#obj-specreceiversemailconfigstlsconfigcertconfigmap)
+            * [`fn withKey(key)`](#fn-specreceiversemailconfigstlsconfigcertconfigmapwithkey)
+            * [`fn withName(name)`](#fn-specreceiversemailconfigstlsconfigcertconfigmapwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversemailconfigstlsconfigcertconfigmapwithoptional)
+          * [`obj spec.receivers.emailConfigs.tlsConfig.cert.secret`](#obj-specreceiversemailconfigstlsconfigcertsecret)
+            * [`fn withKey(key)`](#fn-specreceiversemailconfigstlsconfigcertsecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiversemailconfigstlsconfigcertsecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversemailconfigstlsconfigcertsecretwithoptional)
+        * [`obj spec.receivers.emailConfigs.tlsConfig.keySecret`](#obj-specreceiversemailconfigstlsconfigkeysecret)
+          * [`fn withKey(key)`](#fn-specreceiversemailconfigstlsconfigkeysecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiversemailconfigstlsconfigkeysecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiversemailconfigstlsconfigkeysecretwithoptional)
+    * [`obj spec.receivers.opsgenieConfigs`](#obj-specreceiversopsgenieconfigs)
+      * [`fn withApiURL(apiURL)`](#fn-specreceiversopsgenieconfigswithapiurl)
+      * [`fn withDescription(description)`](#fn-specreceiversopsgenieconfigswithdescription)
+      * [`fn withDetails(details)`](#fn-specreceiversopsgenieconfigswithdetails)
+      * [`fn withDetailsMixin(details)`](#fn-specreceiversopsgenieconfigswithdetailsmixin)
+      * [`fn withMessage(message)`](#fn-specreceiversopsgenieconfigswithmessage)
+      * [`fn withNote(note)`](#fn-specreceiversopsgenieconfigswithnote)
+      * [`fn withPriority(priority)`](#fn-specreceiversopsgenieconfigswithpriority)
+      * [`fn withResponders(responders)`](#fn-specreceiversopsgenieconfigswithresponders)
+      * [`fn withRespondersMixin(responders)`](#fn-specreceiversopsgenieconfigswithrespondersmixin)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiversopsgenieconfigswithsendresolved)
+      * [`fn withSource(source)`](#fn-specreceiversopsgenieconfigswithsource)
+      * [`fn withTags(tags)`](#fn-specreceiversopsgenieconfigswithtags)
+      * [`obj spec.receivers.opsgenieConfigs.apiKey`](#obj-specreceiversopsgenieconfigsapikey)
+        * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigsapikeywithkey)
+        * [`fn withName(name)`](#fn-specreceiversopsgenieconfigsapikeywithname)
+        * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigsapikeywithoptional)
+      * [`obj spec.receivers.opsgenieConfigs.details`](#obj-specreceiversopsgenieconfigsdetails)
+        * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigsdetailswithkey)
+        * [`fn withValue(value)`](#fn-specreceiversopsgenieconfigsdetailswithvalue)
+      * [`obj spec.receivers.opsgenieConfigs.httpConfig`](#obj-specreceiversopsgenieconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiversopsgenieconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.opsgenieConfigs.httpConfig.basicAuth`](#obj-specreceiversopsgenieconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.opsgenieConfigs.httpConfig.basicAuth.password`](#obj-specreceiversopsgenieconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.opsgenieConfigs.httpConfig.basicAuth.username`](#obj-specreceiversopsgenieconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.opsgenieConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiversopsgenieconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiversopsgenieconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversopsgenieconfigshttpconfigtlsconfigkeysecretwithoptional)
+      * [`obj spec.receivers.opsgenieConfigs.responders`](#obj-specreceiversopsgenieconfigsresponders)
+        * [`fn withId(id)`](#fn-specreceiversopsgenieconfigsresponderswithid)
+        * [`fn withName(name)`](#fn-specreceiversopsgenieconfigsresponderswithname)
+        * [`fn withType(type)`](#fn-specreceiversopsgenieconfigsresponderswithtype)
+        * [`fn withUsername(username)`](#fn-specreceiversopsgenieconfigsresponderswithusername)
+    * [`obj spec.receivers.pagerdutyConfigs`](#obj-specreceiverspagerdutyconfigs)
+      * [`fn withClass(class)`](#fn-specreceiverspagerdutyconfigswithclass)
+      * [`fn withClient(client)`](#fn-specreceiverspagerdutyconfigswithclient)
+      * [`fn withClientURL(clientURL)`](#fn-specreceiverspagerdutyconfigswithclienturl)
+      * [`fn withComponent(component)`](#fn-specreceiverspagerdutyconfigswithcomponent)
+      * [`fn withDescription(description)`](#fn-specreceiverspagerdutyconfigswithdescription)
+      * [`fn withDetails(details)`](#fn-specreceiverspagerdutyconfigswithdetails)
+      * [`fn withDetailsMixin(details)`](#fn-specreceiverspagerdutyconfigswithdetailsmixin)
+      * [`fn withGroup(group)`](#fn-specreceiverspagerdutyconfigswithgroup)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiverspagerdutyconfigswithsendresolved)
+      * [`fn withSeverity(severity)`](#fn-specreceiverspagerdutyconfigswithseverity)
+      * [`fn withUrl(url)`](#fn-specreceiverspagerdutyconfigswithurl)
+      * [`obj spec.receivers.pagerdutyConfigs.details`](#obj-specreceiverspagerdutyconfigsdetails)
+        * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigsdetailswithkey)
+        * [`fn withValue(value)`](#fn-specreceiverspagerdutyconfigsdetailswithvalue)
+      * [`obj spec.receivers.pagerdutyConfigs.httpConfig`](#obj-specreceiverspagerdutyconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiverspagerdutyconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.pagerdutyConfigs.httpConfig.basicAuth`](#obj-specreceiverspagerdutyconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.password`](#obj-specreceiverspagerdutyconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.username`](#obj-specreceiverspagerdutyconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.pagerdutyConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiverspagerdutyconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiverspagerdutyconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigshttpconfigtlsconfigkeysecretwithoptional)
+      * [`obj spec.receivers.pagerdutyConfigs.routingKey`](#obj-specreceiverspagerdutyconfigsroutingkey)
+        * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigsroutingkeywithkey)
+        * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigsroutingkeywithname)
+        * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigsroutingkeywithoptional)
+      * [`obj spec.receivers.pagerdutyConfigs.serviceKey`](#obj-specreceiverspagerdutyconfigsservicekey)
+        * [`fn withKey(key)`](#fn-specreceiverspagerdutyconfigsservicekeywithkey)
+        * [`fn withName(name)`](#fn-specreceiverspagerdutyconfigsservicekeywithname)
+        * [`fn withOptional(optional)`](#fn-specreceiverspagerdutyconfigsservicekeywithoptional)
+    * [`obj spec.receivers.pushoverConfigs`](#obj-specreceiverspushoverconfigs)
+      * [`fn withExpire(expire)`](#fn-specreceiverspushoverconfigswithexpire)
+      * [`fn withHtml(html)`](#fn-specreceiverspushoverconfigswithhtml)
+      * [`fn withMessage(message)`](#fn-specreceiverspushoverconfigswithmessage)
+      * [`fn withPriority(priority)`](#fn-specreceiverspushoverconfigswithpriority)
+      * [`fn withRetry(retry)`](#fn-specreceiverspushoverconfigswithretry)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiverspushoverconfigswithsendresolved)
+      * [`fn withSound(sound)`](#fn-specreceiverspushoverconfigswithsound)
+      * [`fn withTitle(title)`](#fn-specreceiverspushoverconfigswithtitle)
+      * [`fn withUrl(url)`](#fn-specreceiverspushoverconfigswithurl)
+      * [`fn withUrlTitle(urlTitle)`](#fn-specreceiverspushoverconfigswithurltitle)
+      * [`obj spec.receivers.pushoverConfigs.httpConfig`](#obj-specreceiverspushoverconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiverspushoverconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.pushoverConfigs.httpConfig.basicAuth`](#obj-specreceiverspushoverconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.pushoverConfigs.httpConfig.basicAuth.password`](#obj-specreceiverspushoverconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.pushoverConfigs.httpConfig.basicAuth.username`](#obj-specreceiverspushoverconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.pushoverConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiverspushoverconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig`](#obj-specreceiverspushoverconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiverspushoverconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigshttpconfigtlsconfigkeysecretwithoptional)
+      * [`obj spec.receivers.pushoverConfigs.token`](#obj-specreceiverspushoverconfigstoken)
+        * [`fn withKey(key)`](#fn-specreceiverspushoverconfigstokenwithkey)
+        * [`fn withName(name)`](#fn-specreceiverspushoverconfigstokenwithname)
+        * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigstokenwithoptional)
+      * [`obj spec.receivers.pushoverConfigs.userKey`](#obj-specreceiverspushoverconfigsuserkey)
+        * [`fn withKey(key)`](#fn-specreceiverspushoverconfigsuserkeywithkey)
+        * [`fn withName(name)`](#fn-specreceiverspushoverconfigsuserkeywithname)
+        * [`fn withOptional(optional)`](#fn-specreceiverspushoverconfigsuserkeywithoptional)
+    * [`obj spec.receivers.slackConfigs`](#obj-specreceiversslackconfigs)
+      * [`fn withActions(actions)`](#fn-specreceiversslackconfigswithactions)
+      * [`fn withActionsMixin(actions)`](#fn-specreceiversslackconfigswithactionsmixin)
+      * [`fn withCallbackId(callbackId)`](#fn-specreceiversslackconfigswithcallbackid)
+      * [`fn withChannel(channel)`](#fn-specreceiversslackconfigswithchannel)
+      * [`fn withColor(color)`](#fn-specreceiversslackconfigswithcolor)
+      * [`fn withFallback(fallback)`](#fn-specreceiversslackconfigswithfallback)
+      * [`fn withFields(fields)`](#fn-specreceiversslackconfigswithfields)
+      * [`fn withFieldsMixin(fields)`](#fn-specreceiversslackconfigswithfieldsmixin)
+      * [`fn withFooter(footer)`](#fn-specreceiversslackconfigswithfooter)
+      * [`fn withIconEmoji(iconEmoji)`](#fn-specreceiversslackconfigswithiconemoji)
+      * [`fn withIconURL(iconURL)`](#fn-specreceiversslackconfigswithiconurl)
+      * [`fn withImageURL(imageURL)`](#fn-specreceiversslackconfigswithimageurl)
+      * [`fn withLinkNames(linkNames)`](#fn-specreceiversslackconfigswithlinknames)
+      * [`fn withMrkdwnIn(mrkdwnIn)`](#fn-specreceiversslackconfigswithmrkdwnin)
+      * [`fn withMrkdwnInMixin(mrkdwnIn)`](#fn-specreceiversslackconfigswithmrkdwninmixin)
+      * [`fn withPretext(pretext)`](#fn-specreceiversslackconfigswithpretext)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiversslackconfigswithsendresolved)
+      * [`fn withShortFields(shortFields)`](#fn-specreceiversslackconfigswithshortfields)
+      * [`fn withText(text)`](#fn-specreceiversslackconfigswithtext)
+      * [`fn withThumbURL(thumbURL)`](#fn-specreceiversslackconfigswiththumburl)
+      * [`fn withTitle(title)`](#fn-specreceiversslackconfigswithtitle)
+      * [`fn withTitleLink(titleLink)`](#fn-specreceiversslackconfigswithtitlelink)
+      * [`fn withUsername(username)`](#fn-specreceiversslackconfigswithusername)
+      * [`obj spec.receivers.slackConfigs.actions`](#obj-specreceiversslackconfigsactions)
+        * [`fn withName(name)`](#fn-specreceiversslackconfigsactionswithname)
+        * [`fn withStyle(style)`](#fn-specreceiversslackconfigsactionswithstyle)
+        * [`fn withText(text)`](#fn-specreceiversslackconfigsactionswithtext)
+        * [`fn withType(type)`](#fn-specreceiversslackconfigsactionswithtype)
+        * [`fn withUrl(url)`](#fn-specreceiversslackconfigsactionswithurl)
+        * [`fn withValue(value)`](#fn-specreceiversslackconfigsactionswithvalue)
+        * [`obj spec.receivers.slackConfigs.actions.confirm`](#obj-specreceiversslackconfigsactionsconfirm)
+          * [`fn withDismissText(dismissText)`](#fn-specreceiversslackconfigsactionsconfirmwithdismisstext)
+          * [`fn withOkText(okText)`](#fn-specreceiversslackconfigsactionsconfirmwithoktext)
+          * [`fn withText(text)`](#fn-specreceiversslackconfigsactionsconfirmwithtext)
+          * [`fn withTitle(title)`](#fn-specreceiversslackconfigsactionsconfirmwithtitle)
+      * [`obj spec.receivers.slackConfigs.apiURL`](#obj-specreceiversslackconfigsapiurl)
+        * [`fn withKey(key)`](#fn-specreceiversslackconfigsapiurlwithkey)
+        * [`fn withName(name)`](#fn-specreceiversslackconfigsapiurlwithname)
+        * [`fn withOptional(optional)`](#fn-specreceiversslackconfigsapiurlwithoptional)
+      * [`obj spec.receivers.slackConfigs.fields`](#obj-specreceiversslackconfigsfields)
+        * [`fn withShort(short)`](#fn-specreceiversslackconfigsfieldswithshort)
+        * [`fn withTitle(title)`](#fn-specreceiversslackconfigsfieldswithtitle)
+        * [`fn withValue(value)`](#fn-specreceiversslackconfigsfieldswithvalue)
+      * [`obj spec.receivers.slackConfigs.httpConfig`](#obj-specreceiversslackconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiversslackconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.slackConfigs.httpConfig.basicAuth`](#obj-specreceiversslackconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.slackConfigs.httpConfig.basicAuth.password`](#obj-specreceiversslackconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.slackConfigs.httpConfig.basicAuth.username`](#obj-specreceiversslackconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.slackConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiversslackconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig`](#obj-specreceiversslackconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiversslackconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiversslackconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiversslackconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiversslackconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiversslackconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiversslackconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiversslackconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiversslackconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.slackConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiversslackconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiversslackconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiversslackconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversslackconfigshttpconfigtlsconfigkeysecretwithoptional)
+    * [`obj spec.receivers.victoropsConfigs`](#obj-specreceiversvictoropsconfigs)
+      * [`fn withApiUrl(apiUrl)`](#fn-specreceiversvictoropsconfigswithapiurl)
+      * [`fn withCustomFields(customFields)`](#fn-specreceiversvictoropsconfigswithcustomfields)
+      * [`fn withCustomFieldsMixin(customFields)`](#fn-specreceiversvictoropsconfigswithcustomfieldsmixin)
+      * [`fn withEntityDisplayName(entityDisplayName)`](#fn-specreceiversvictoropsconfigswithentitydisplayname)
+      * [`fn withMessageType(messageType)`](#fn-specreceiversvictoropsconfigswithmessagetype)
+      * [`fn withMonitoringTool(monitoringTool)`](#fn-specreceiversvictoropsconfigswithmonitoringtool)
+      * [`fn withRoutingKey(routingKey)`](#fn-specreceiversvictoropsconfigswithroutingkey)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiversvictoropsconfigswithsendresolved)
+      * [`fn withStateMessage(stateMessage)`](#fn-specreceiversvictoropsconfigswithstatemessage)
+      * [`obj spec.receivers.victoropsConfigs.apiKey`](#obj-specreceiversvictoropsconfigsapikey)
+        * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigsapikeywithkey)
+        * [`fn withName(name)`](#fn-specreceiversvictoropsconfigsapikeywithname)
+        * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigsapikeywithoptional)
+      * [`obj spec.receivers.victoropsConfigs.customFields`](#obj-specreceiversvictoropsconfigscustomfields)
+        * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigscustomfieldswithkey)
+        * [`fn withValue(value)`](#fn-specreceiversvictoropsconfigscustomfieldswithvalue)
+      * [`obj spec.receivers.victoropsConfigs.httpConfig`](#obj-specreceiversvictoropsconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiversvictoropsconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.victoropsConfigs.httpConfig.basicAuth`](#obj-specreceiversvictoropsconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.victoropsConfigs.httpConfig.basicAuth.password`](#obj-specreceiversvictoropsconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.victoropsConfigs.httpConfig.basicAuth.username`](#obj-specreceiversvictoropsconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.victoropsConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiversvictoropsconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiversvictoropsconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiversvictoropsconfigshttpconfigtlsconfigkeysecretwithoptional)
+    * [`obj spec.receivers.webhookConfigs`](#obj-specreceiverswebhookconfigs)
+      * [`fn withMaxAlerts(maxAlerts)`](#fn-specreceiverswebhookconfigswithmaxalerts)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiverswebhookconfigswithsendresolved)
+      * [`fn withUrl(url)`](#fn-specreceiverswebhookconfigswithurl)
+      * [`obj spec.receivers.webhookConfigs.httpConfig`](#obj-specreceiverswebhookconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiverswebhookconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.webhookConfigs.httpConfig.basicAuth`](#obj-specreceiverswebhookconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.webhookConfigs.httpConfig.basicAuth.password`](#obj-specreceiverswebhookconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.webhookConfigs.httpConfig.basicAuth.username`](#obj-specreceiverswebhookconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.webhookConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiverswebhookconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig`](#obj-specreceiverswebhookconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiverswebhookconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigshttpconfigtlsconfigkeysecretwithoptional)
+      * [`obj spec.receivers.webhookConfigs.urlSecret`](#obj-specreceiverswebhookconfigsurlsecret)
+        * [`fn withKey(key)`](#fn-specreceiverswebhookconfigsurlsecretwithkey)
+        * [`fn withName(name)`](#fn-specreceiverswebhookconfigsurlsecretwithname)
+        * [`fn withOptional(optional)`](#fn-specreceiverswebhookconfigsurlsecretwithoptional)
+    * [`obj spec.receivers.wechatConfigs`](#obj-specreceiverswechatconfigs)
+      * [`fn withAgentID(agentID)`](#fn-specreceiverswechatconfigswithagentid)
+      * [`fn withApiURL(apiURL)`](#fn-specreceiverswechatconfigswithapiurl)
+      * [`fn withCorpID(corpID)`](#fn-specreceiverswechatconfigswithcorpid)
+      * [`fn withMessage(message)`](#fn-specreceiverswechatconfigswithmessage)
+      * [`fn withMessageType(messageType)`](#fn-specreceiverswechatconfigswithmessagetype)
+      * [`fn withSendResolved(sendResolved)`](#fn-specreceiverswechatconfigswithsendresolved)
+      * [`fn withToParty(toParty)`](#fn-specreceiverswechatconfigswithtoparty)
+      * [`fn withToTag(toTag)`](#fn-specreceiverswechatconfigswithtotag)
+      * [`fn withToUser(toUser)`](#fn-specreceiverswechatconfigswithtouser)
+      * [`obj spec.receivers.wechatConfigs.apiSecret`](#obj-specreceiverswechatconfigsapisecret)
+        * [`fn withKey(key)`](#fn-specreceiverswechatconfigsapisecretwithkey)
+        * [`fn withName(name)`](#fn-specreceiverswechatconfigsapisecretwithname)
+        * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigsapisecretwithoptional)
+      * [`obj spec.receivers.wechatConfigs.httpConfig`](#obj-specreceiverswechatconfigshttpconfig)
+        * [`fn withProxyURL(proxyURL)`](#fn-specreceiverswechatconfigshttpconfigwithproxyurl)
+        * [`obj spec.receivers.wechatConfigs.httpConfig.basicAuth`](#obj-specreceiverswechatconfigshttpconfigbasicauth)
+          * [`obj spec.receivers.wechatConfigs.httpConfig.basicAuth.password`](#obj-specreceiverswechatconfigshttpconfigbasicauthpassword)
+            * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigbasicauthpasswordwithkey)
+            * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigbasicauthpasswordwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigbasicauthpasswordwithoptional)
+          * [`obj spec.receivers.wechatConfigs.httpConfig.basicAuth.username`](#obj-specreceiverswechatconfigshttpconfigbasicauthusername)
+            * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigbasicauthusernamewithkey)
+            * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigbasicauthusernamewithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigbasicauthusernamewithoptional)
+        * [`obj spec.receivers.wechatConfigs.httpConfig.bearerTokenSecret`](#obj-specreceiverswechatconfigshttpconfigbearertokensecret)
+          * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigbearertokensecretwithkey)
+          * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigbearertokensecretwithname)
+          * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigbearertokensecretwithoptional)
+        * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig`](#obj-specreceiverswechatconfigshttpconfigtlsconfig)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigwithservername)
+          * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca`](#obj-specreceiverswechatconfigshttpconfigtlsconfigca)
+            * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.configMap`](#obj-specreceiverswechatconfigshttpconfigtlsconfigcaconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcaconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcaconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcaconfigmapwithoptional)
+            * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.secret`](#obj-specreceiverswechatconfigshttpconfigtlsconfigcasecret)
+              * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcasecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcasecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcasecretwithoptional)
+          * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert`](#obj-specreceiverswechatconfigshttpconfigtlsconfigcert)
+            * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.configMap`](#obj-specreceiverswechatconfigshttpconfigtlsconfigcertconfigmap)
+              * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcertconfigmapwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcertconfigmapwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcertconfigmapwithoptional)
+            * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.secret`](#obj-specreceiverswechatconfigshttpconfigtlsconfigcertsecret)
+              * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcertsecretwithkey)
+              * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcertsecretwithname)
+              * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigcertsecretwithoptional)
+          * [`obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.keySecret`](#obj-specreceiverswechatconfigshttpconfigtlsconfigkeysecret)
+            * [`fn withKey(key)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigkeysecretwithkey)
+            * [`fn withName(name)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigkeysecretwithname)
+            * [`fn withOptional(optional)`](#fn-specreceiverswechatconfigshttpconfigtlsconfigkeysecretwithoptional)
   * [`obj spec.route`](#obj-specroute)
     * [`fn withContinue(continue)`](#fn-specroutewithcontinue)
     * [`fn withGroupBy(groupBy)`](#fn-specroutewithgroupby)
@@ -48,6 +558,10 @@ permalink: /0.8/monitoring/v1alpha1/alertmanagerConfig/
     * [`fn withRepeatInterval(repeatInterval)`](#fn-specroutewithrepeatinterval)
     * [`fn withRoutes(routes)`](#fn-specroutewithroutes)
     * [`fn withRoutesMixin(routes)`](#fn-specroutewithroutesmixin)
+    * [`obj spec.route.matchers`](#obj-specroutematchers)
+      * [`fn withName(name)`](#fn-specroutematcherswithname)
+      * [`fn withRegex(regex)`](#fn-specroutematcherswithregex)
+      * [`fn withValue(value)`](#fn-specroutematcherswithvalue)
 
 ## Fields
 
@@ -165,24 +679,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -281,6 +777,3620 @@ withReceiversMixin(receivers)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.inhibitRules
+
+"List of inhibition rules. The rules will only apply to alerts matching the resource’s namespace."
+
+### fn spec.inhibitRules.withEqual
+
+```ts
+withEqual(equal)
+```
+
+"Labels that must have an equal value in the source and target alert for the inhibition to take effect."
+
+### fn spec.inhibitRules.withEqualMixin
+
+```ts
+withEqualMixin(equal)
+```
+
+"Labels that must have an equal value in the source and target alert for the inhibition to take effect."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.inhibitRules.withSourceMatch
+
+```ts
+withSourceMatch(sourceMatch)
+```
+
+"Matchers for which one or more alerts have to exist for the inhibition to take effect. The operator enforces that the alert matches the resource’s namespace."
+
+### fn spec.inhibitRules.withSourceMatchMixin
+
+```ts
+withSourceMatchMixin(sourceMatch)
+```
+
+"Matchers for which one or more alerts have to exist for the inhibition to take effect. The operator enforces that the alert matches the resource’s namespace."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.inhibitRules.withTargetMatch
+
+```ts
+withTargetMatch(targetMatch)
+```
+
+"Matchers that have to be fulfilled in the alerts to be muted. The operator enforces that the alert matches the resource’s namespace."
+
+### fn spec.inhibitRules.withTargetMatchMixin
+
+```ts
+withTargetMatchMixin(targetMatch)
+```
+
+"Matchers that have to be fulfilled in the alerts to be muted. The operator enforces that the alert matches the resource’s namespace."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.inhibitRules.sourceMatch
+
+"Matchers for which one or more alerts have to exist for the inhibition to take effect. The operator enforces that the alert matches the resource’s namespace."
+
+### fn spec.inhibitRules.sourceMatch.withName
+
+```ts
+withName(name)
+```
+
+"Label to match."
+
+### fn spec.inhibitRules.sourceMatch.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Whether to match on equality (false) or regular-expression (true)."
+
+### fn spec.inhibitRules.sourceMatch.withValue
+
+```ts
+withValue(value)
+```
+
+"Label value to match."
+
+## obj spec.inhibitRules.targetMatch
+
+"Matchers that have to be fulfilled in the alerts to be muted. The operator enforces that the alert matches the resource’s namespace."
+
+### fn spec.inhibitRules.targetMatch.withName
+
+```ts
+withName(name)
+```
+
+"Label to match."
+
+### fn spec.inhibitRules.targetMatch.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Whether to match on equality (false) or regular-expression (true)."
+
+### fn spec.inhibitRules.targetMatch.withValue
+
+```ts
+withValue(value)
+```
+
+"Label value to match."
+
+## obj spec.receivers
+
+"List of receivers."
+
+### fn spec.receivers.withEmailConfigs
+
+```ts
+withEmailConfigs(emailConfigs)
+```
+
+"List of Email configurations."
+
+### fn spec.receivers.withEmailConfigsMixin
+
+```ts
+withEmailConfigsMixin(emailConfigs)
+```
+
+"List of Email configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withName
+
+```ts
+withName(name)
+```
+
+"Name of the receiver. Must be unique across all items from the list."
+
+### fn spec.receivers.withOpsgenieConfigs
+
+```ts
+withOpsgenieConfigs(opsgenieConfigs)
+```
+
+"List of OpsGenie configurations."
+
+### fn spec.receivers.withOpsgenieConfigsMixin
+
+```ts
+withOpsgenieConfigsMixin(opsgenieConfigs)
+```
+
+"List of OpsGenie configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withPagerdutyConfigs
+
+```ts
+withPagerdutyConfigs(pagerdutyConfigs)
+```
+
+"List of PagerDuty configurations."
+
+### fn spec.receivers.withPagerdutyConfigsMixin
+
+```ts
+withPagerdutyConfigsMixin(pagerdutyConfigs)
+```
+
+"List of PagerDuty configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withPushoverConfigs
+
+```ts
+withPushoverConfigs(pushoverConfigs)
+```
+
+"List of Pushover configurations."
+
+### fn spec.receivers.withPushoverConfigsMixin
+
+```ts
+withPushoverConfigsMixin(pushoverConfigs)
+```
+
+"List of Pushover configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withSlackConfigs
+
+```ts
+withSlackConfigs(slackConfigs)
+```
+
+"List of Slack configurations."
+
+### fn spec.receivers.withSlackConfigsMixin
+
+```ts
+withSlackConfigsMixin(slackConfigs)
+```
+
+"List of Slack configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withVictoropsConfigs
+
+```ts
+withVictoropsConfigs(victoropsConfigs)
+```
+
+"List of VictorOps configurations."
+
+### fn spec.receivers.withVictoropsConfigsMixin
+
+```ts
+withVictoropsConfigsMixin(victoropsConfigs)
+```
+
+"List of VictorOps configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withWebhookConfigs
+
+```ts
+withWebhookConfigs(webhookConfigs)
+```
+
+"List of webhook configurations."
+
+### fn spec.receivers.withWebhookConfigsMixin
+
+```ts
+withWebhookConfigsMixin(webhookConfigs)
+```
+
+"List of webhook configurations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.withWechatConfigs
+
+```ts
+withWechatConfigs(wechatConfigs)
+```
+
+"List of WeChat configurations."
+
+### fn spec.receivers.withWechatConfigsMixin
+
+```ts
+withWechatConfigsMixin(wechatConfigs)
+```
+
+"List of WeChat configurations."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.receivers.emailConfigs
+
+"List of Email configurations."
+
+### fn spec.receivers.emailConfigs.withAuthIdentity
+
+```ts
+withAuthIdentity(authIdentity)
+```
+
+"The identity to use for authentication."
+
+### fn spec.receivers.emailConfigs.withAuthUsername
+
+```ts
+withAuthUsername(authUsername)
+```
+
+"The username to use for authentication."
+
+### fn spec.receivers.emailConfigs.withFrom
+
+```ts
+withFrom(from)
+```
+
+"The sender address."
+
+### fn spec.receivers.emailConfigs.withHeaders
+
+```ts
+withHeaders(headers)
+```
+
+"Further headers email header key/value pairs. Overrides any headers previously set by the notification implementation."
+
+### fn spec.receivers.emailConfigs.withHeadersMixin
+
+```ts
+withHeadersMixin(headers)
+```
+
+"Further headers email header key/value pairs. Overrides any headers previously set by the notification implementation."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.emailConfigs.withHello
+
+```ts
+withHello(hello)
+```
+
+"The hostname to identify to the SMTP server."
+
+### fn spec.receivers.emailConfigs.withHtml
+
+```ts
+withHtml(html)
+```
+
+"The HTML body of the email notification."
+
+### fn spec.receivers.emailConfigs.withRequireTLS
+
+```ts
+withRequireTLS(requireTLS)
+```
+
+"The SMTP TLS requirement. Note that Go does not support unencrypted connections to remote SMTP endpoints."
+
+### fn spec.receivers.emailConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.emailConfigs.withSmarthost
+
+```ts
+withSmarthost(smarthost)
+```
+
+"The SMTP host through which emails are sent."
+
+### fn spec.receivers.emailConfigs.withText
+
+```ts
+withText(text)
+```
+
+"The text body of the email notification."
+
+### fn spec.receivers.emailConfigs.withTo
+
+```ts
+withTo(to)
+```
+
+"The email address to send notifications to."
+
+## obj spec.receivers.emailConfigs.authPassword
+
+"The secret's key that contains the password to use for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.emailConfigs.authPassword.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.emailConfigs.authPassword.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.authPassword.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.emailConfigs.authSecret
+
+"The secret's key that contains the CRAM-MD5 secret. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.emailConfigs.authSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.emailConfigs.authSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.authSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.emailConfigs.headers
+
+"Further headers email header key/value pairs. Overrides any headers previously set by the notification implementation."
+
+### fn spec.receivers.emailConfigs.headers.withKey
+
+```ts
+withKey(key)
+```
+
+"Key of the tuple."
+
+### fn spec.receivers.emailConfigs.headers.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the tuple."
+
+## obj spec.receivers.emailConfigs.tlsConfig
+
+"TLS configuration"
+
+### fn spec.receivers.emailConfigs.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.emailConfigs.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.emailConfigs.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.emailConfigs.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.emailConfigs.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.emailConfigs.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.emailConfigs.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.emailConfigs.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.emailConfigs.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.emailConfigs.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.emailConfigs.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.emailConfigs.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.emailConfigs.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.emailConfigs.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.emailConfigs.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.emailConfigs.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.emailConfigs.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.emailConfigs.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.emailConfigs.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.emailConfigs.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs
+
+"List of OpsGenie configurations."
+
+### fn spec.receivers.opsgenieConfigs.withApiURL
+
+```ts
+withApiURL(apiURL)
+```
+
+"The URL to send OpsGenie API requests to."
+
+### fn spec.receivers.opsgenieConfigs.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description of the incident."
+
+### fn spec.receivers.opsgenieConfigs.withDetails
+
+```ts
+withDetails(details)
+```
+
+"A set of arbitrary key/value pairs that provide further detail about the incident."
+
+### fn spec.receivers.opsgenieConfigs.withDetailsMixin
+
+```ts
+withDetailsMixin(details)
+```
+
+"A set of arbitrary key/value pairs that provide further detail about the incident."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.opsgenieConfigs.withMessage
+
+```ts
+withMessage(message)
+```
+
+"Alert text limited to 130 characters."
+
+### fn spec.receivers.opsgenieConfigs.withNote
+
+```ts
+withNote(note)
+```
+
+"Additional alert note."
+
+### fn spec.receivers.opsgenieConfigs.withPriority
+
+```ts
+withPriority(priority)
+```
+
+"Priority level of alert. Possible values are P1, P2, P3, P4, and P5."
+
+### fn spec.receivers.opsgenieConfigs.withResponders
+
+```ts
+withResponders(responders)
+```
+
+"List of responders responsible for notifications."
+
+### fn spec.receivers.opsgenieConfigs.withRespondersMixin
+
+```ts
+withRespondersMixin(responders)
+```
+
+"List of responders responsible for notifications."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.opsgenieConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.opsgenieConfigs.withSource
+
+```ts
+withSource(source)
+```
+
+"Backlink to the sender of the notification."
+
+### fn spec.receivers.opsgenieConfigs.withTags
+
+```ts
+withTags(tags)
+```
+
+"Comma separated list of tags attached to the notifications."
+
+## obj spec.receivers.opsgenieConfigs.apiKey
+
+"The secret's key that contains the OpsGenie API key. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.opsgenieConfigs.apiKey.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.apiKey.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.apiKey.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.details
+
+"A set of arbitrary key/value pairs that provide further detail about the incident."
+
+### fn spec.receivers.opsgenieConfigs.details.withKey
+
+```ts
+withKey(key)
+```
+
+"Key of the tuple."
+
+### fn spec.receivers.opsgenieConfigs.details.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the tuple."
+
+## obj spec.receivers.opsgenieConfigs.httpConfig
+
+"HTTP client configuration."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.opsgenieConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.opsgenieConfigs.responders
+
+"List of responders responsible for notifications."
+
+### fn spec.receivers.opsgenieConfigs.responders.withId
+
+```ts
+withId(id)
+```
+
+"ID of the responder."
+
+### fn spec.receivers.opsgenieConfigs.responders.withName
+
+```ts
+withName(name)
+```
+
+"Name of the responder."
+
+### fn spec.receivers.opsgenieConfigs.responders.withType
+
+```ts
+withType(type)
+```
+
+"Type of responder."
+
+### fn spec.receivers.opsgenieConfigs.responders.withUsername
+
+```ts
+withUsername(username)
+```
+
+"Username of the responder."
+
+## obj spec.receivers.pagerdutyConfigs
+
+"List of PagerDuty configurations."
+
+### fn spec.receivers.pagerdutyConfigs.withClass
+
+```ts
+withClass(class)
+```
+
+"The class/type of the event."
+
+### fn spec.receivers.pagerdutyConfigs.withClient
+
+```ts
+withClient(client)
+```
+
+"Client identification."
+
+### fn spec.receivers.pagerdutyConfigs.withClientURL
+
+```ts
+withClientURL(clientURL)
+```
+
+"Backlink to the sender of notification."
+
+### fn spec.receivers.pagerdutyConfigs.withComponent
+
+```ts
+withComponent(component)
+```
+
+"The part or component of the affected system that is broken."
+
+### fn spec.receivers.pagerdutyConfigs.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description of the incident."
+
+### fn spec.receivers.pagerdutyConfigs.withDetails
+
+```ts
+withDetails(details)
+```
+
+"Arbitrary key/value pairs that provide further detail about the incident."
+
+### fn spec.receivers.pagerdutyConfigs.withDetailsMixin
+
+```ts
+withDetailsMixin(details)
+```
+
+"Arbitrary key/value pairs that provide further detail about the incident."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.pagerdutyConfigs.withGroup
+
+```ts
+withGroup(group)
+```
+
+"A cluster or grouping of sources."
+
+### fn spec.receivers.pagerdutyConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.pagerdutyConfigs.withSeverity
+
+```ts
+withSeverity(severity)
+```
+
+"Severity of the incident."
+
+### fn spec.receivers.pagerdutyConfigs.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The URL to send requests to."
+
+## obj spec.receivers.pagerdutyConfigs.details
+
+"Arbitrary key/value pairs that provide further detail about the incident."
+
+### fn spec.receivers.pagerdutyConfigs.details.withKey
+
+```ts
+withKey(key)
+```
+
+"Key of the tuple."
+
+### fn spec.receivers.pagerdutyConfigs.details.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the tuple."
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig
+
+"HTTP client configuration."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.routingKey
+
+"The secret's key that contains the PagerDuty integration key (when using Events API v2). Either this field or `serviceKey` needs to be defined. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.pagerdutyConfigs.routingKey.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.routingKey.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.routingKey.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pagerdutyConfigs.serviceKey
+
+"The secret's key that contains the PagerDuty service key (when using integration type \"Prometheus\"). Either this field or `routingKey` needs to be defined. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.pagerdutyConfigs.serviceKey.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pagerdutyConfigs.serviceKey.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pagerdutyConfigs.serviceKey.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs
+
+"List of Pushover configurations."
+
+### fn spec.receivers.pushoverConfigs.withExpire
+
+```ts
+withExpire(expire)
+```
+
+"How long your notification will continue to be retried for, unless the user acknowledges the notification."
+
+### fn spec.receivers.pushoverConfigs.withHtml
+
+```ts
+withHtml(html)
+```
+
+"Whether notification message is HTML or plain text."
+
+### fn spec.receivers.pushoverConfigs.withMessage
+
+```ts
+withMessage(message)
+```
+
+"Notification message."
+
+### fn spec.receivers.pushoverConfigs.withPriority
+
+```ts
+withPriority(priority)
+```
+
+"Priority, see https://pushover.net/api#priority"
+
+### fn spec.receivers.pushoverConfigs.withRetry
+
+```ts
+withRetry(retry)
+```
+
+"How often the Pushover servers will send the same notification to the user. Must be at least 30 seconds."
+
+### fn spec.receivers.pushoverConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.pushoverConfigs.withSound
+
+```ts
+withSound(sound)
+```
+
+"The name of one of the sounds supported by device clients to override the user's default sound choice"
+
+### fn spec.receivers.pushoverConfigs.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Notification title."
+
+### fn spec.receivers.pushoverConfigs.withUrl
+
+```ts
+withUrl(url)
+```
+
+"A supplementary URL shown alongside the message."
+
+### fn spec.receivers.pushoverConfigs.withUrlTitle
+
+```ts
+withUrlTitle(urlTitle)
+```
+
+"A title for supplementary URL, otherwise just the URL is shown"
+
+## obj spec.receivers.pushoverConfigs.httpConfig
+
+"HTTP client configuration."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.pushoverConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.pushoverConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.token
+
+"The secret's key that contains the registered application’s API token, see https://pushover.net/apps. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.pushoverConfigs.token.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.token.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.token.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.pushoverConfigs.userKey
+
+"The secret's key that contains the recipient user’s user key. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.pushoverConfigs.userKey.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.pushoverConfigs.userKey.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.pushoverConfigs.userKey.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs
+
+"List of Slack configurations."
+
+### fn spec.receivers.slackConfigs.withActions
+
+```ts
+withActions(actions)
+```
+
+"A list of Slack actions that are sent with each notification."
+
+### fn spec.receivers.slackConfigs.withActionsMixin
+
+```ts
+withActionsMixin(actions)
+```
+
+"A list of Slack actions that are sent with each notification."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.slackConfigs.withCallbackId
+
+```ts
+withCallbackId(callbackId)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withChannel
+
+```ts
+withChannel(channel)
+```
+
+"The channel or user to send notifications to."
+
+### fn spec.receivers.slackConfigs.withColor
+
+```ts
+withColor(color)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withFallback
+
+```ts
+withFallback(fallback)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withFields
+
+```ts
+withFields(fields)
+```
+
+"A list of Slack fields that are sent with each notification."
+
+### fn spec.receivers.slackConfigs.withFieldsMixin
+
+```ts
+withFieldsMixin(fields)
+```
+
+"A list of Slack fields that are sent with each notification."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.slackConfigs.withFooter
+
+```ts
+withFooter(footer)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withIconEmoji
+
+```ts
+withIconEmoji(iconEmoji)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withIconURL
+
+```ts
+withIconURL(iconURL)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withImageURL
+
+```ts
+withImageURL(imageURL)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withLinkNames
+
+```ts
+withLinkNames(linkNames)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withMrkdwnIn
+
+```ts
+withMrkdwnIn(mrkdwnIn)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withMrkdwnInMixin
+
+```ts
+withMrkdwnInMixin(mrkdwnIn)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.slackConfigs.withPretext
+
+```ts
+withPretext(pretext)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.slackConfigs.withShortFields
+
+```ts
+withShortFields(shortFields)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withText
+
+```ts
+withText(text)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withThumbURL
+
+```ts
+withThumbURL(thumbURL)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withTitle
+
+```ts
+withTitle(title)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withTitleLink
+
+```ts
+withTitleLink(titleLink)
+```
+
+
+
+### fn spec.receivers.slackConfigs.withUsername
+
+```ts
+withUsername(username)
+```
+
+
+
+## obj spec.receivers.slackConfigs.actions
+
+"A list of Slack actions that are sent with each notification."
+
+### fn spec.receivers.slackConfigs.actions.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.withStyle
+
+```ts
+withStyle(style)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.withText
+
+```ts
+withText(text)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.withType
+
+```ts
+withType(type)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.withUrl
+
+```ts
+withUrl(url)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.receivers.slackConfigs.actions.confirm
+
+"SlackConfirmationField protect users from destructive actions or particularly distinguished decisions by asking them to confirm their button click one more time. See https://api.slack.com/docs/interactive-message-field-guide#confirmation_fields for more information."
+
+### fn spec.receivers.slackConfigs.actions.confirm.withDismissText
+
+```ts
+withDismissText(dismissText)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.confirm.withOkText
+
+```ts
+withOkText(okText)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.confirm.withText
+
+```ts
+withText(text)
+```
+
+
+
+### fn spec.receivers.slackConfigs.actions.confirm.withTitle
+
+```ts
+withTitle(title)
+```
+
+
+
+## obj spec.receivers.slackConfigs.apiURL
+
+"The secret's key that contains the Slack webhook URL. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.slackConfigs.apiURL.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.apiURL.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.apiURL.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs.fields
+
+"A list of Slack fields that are sent with each notification."
+
+### fn spec.receivers.slackConfigs.fields.withShort
+
+```ts
+withShort(short)
+```
+
+
+
+### fn spec.receivers.slackConfigs.fields.withTitle
+
+```ts
+withTitle(title)
+```
+
+
+
+### fn spec.receivers.slackConfigs.fields.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.receivers.slackConfigs.httpConfig
+
+"HTTP client configuration."
+
+### fn spec.receivers.slackConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.slackConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.slackConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.slackConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.slackConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.slackConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.slackConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.slackConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs
+
+"List of VictorOps configurations."
+
+### fn spec.receivers.victoropsConfigs.withApiUrl
+
+```ts
+withApiUrl(apiUrl)
+```
+
+"The VictorOps API URL."
+
+### fn spec.receivers.victoropsConfigs.withCustomFields
+
+```ts
+withCustomFields(customFields)
+```
+
+"Additional custom fields for notification."
+
+### fn spec.receivers.victoropsConfigs.withCustomFieldsMixin
+
+```ts
+withCustomFieldsMixin(customFields)
+```
+
+"Additional custom fields for notification."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.receivers.victoropsConfigs.withEntityDisplayName
+
+```ts
+withEntityDisplayName(entityDisplayName)
+```
+
+"Contains summary of the alerted problem."
+
+### fn spec.receivers.victoropsConfigs.withMessageType
+
+```ts
+withMessageType(messageType)
+```
+
+"Describes the behavior of the alert (CRITICAL, WARNING, INFO)."
+
+### fn spec.receivers.victoropsConfigs.withMonitoringTool
+
+```ts
+withMonitoringTool(monitoringTool)
+```
+
+"The monitoring tool the state message is from."
+
+### fn spec.receivers.victoropsConfigs.withRoutingKey
+
+```ts
+withRoutingKey(routingKey)
+```
+
+"A key used to map the alert to a team."
+
+### fn spec.receivers.victoropsConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.victoropsConfigs.withStateMessage
+
+```ts
+withStateMessage(stateMessage)
+```
+
+"Contains long explanation of the alerted problem."
+
+## obj spec.receivers.victoropsConfigs.apiKey
+
+"The secret's key that contains the API key to use when talking to the VictorOps API. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.victoropsConfigs.apiKey.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.apiKey.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.apiKey.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.customFields
+
+"Additional custom fields for notification."
+
+### fn spec.receivers.victoropsConfigs.customFields.withKey
+
+```ts
+withKey(key)
+```
+
+"Key of the tuple."
+
+### fn spec.receivers.victoropsConfigs.customFields.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the tuple."
+
+## obj spec.receivers.victoropsConfigs.httpConfig
+
+"The HTTP client's configuration."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.victoropsConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.victoropsConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.victoropsConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.victoropsConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs
+
+"List of webhook configurations."
+
+### fn spec.receivers.webhookConfigs.withMaxAlerts
+
+```ts
+withMaxAlerts(maxAlerts)
+```
+
+"Maximum number of alerts to be sent per webhook message. When 0, all alerts are included."
+
+### fn spec.receivers.webhookConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.webhookConfigs.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The URL to send HTTP POST requests to. `urlSecret` takes precedence over `url`. One of `urlSecret` and `url` should be defined."
+
+## obj spec.receivers.webhookConfigs.httpConfig
+
+"HTTP client configuration."
+
+### fn spec.receivers.webhookConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.webhookConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.webhookConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.webhookConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.webhookConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.webhookConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.webhookConfigs.urlSecret
+
+"The secret's key that contains the webhook URL to send HTTP requests to. `urlSecret` takes precedence over `url`. One of `urlSecret` and `url` should be defined. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.webhookConfigs.urlSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.webhookConfigs.urlSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.webhookConfigs.urlSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs
+
+"List of WeChat configurations."
+
+### fn spec.receivers.wechatConfigs.withAgentID
+
+```ts
+withAgentID(agentID)
+```
+
+
+
+### fn spec.receivers.wechatConfigs.withApiURL
+
+```ts
+withApiURL(apiURL)
+```
+
+"The WeChat API URL."
+
+### fn spec.receivers.wechatConfigs.withCorpID
+
+```ts
+withCorpID(corpID)
+```
+
+"The corp id for authentication."
+
+### fn spec.receivers.wechatConfigs.withMessage
+
+```ts
+withMessage(message)
+```
+
+"API request data as defined by the WeChat API."
+
+### fn spec.receivers.wechatConfigs.withMessageType
+
+```ts
+withMessageType(messageType)
+```
+
+
+
+### fn spec.receivers.wechatConfigs.withSendResolved
+
+```ts
+withSendResolved(sendResolved)
+```
+
+"Whether or not to notify about resolved alerts."
+
+### fn spec.receivers.wechatConfigs.withToParty
+
+```ts
+withToParty(toParty)
+```
+
+
+
+### fn spec.receivers.wechatConfigs.withToTag
+
+```ts
+withToTag(toTag)
+```
+
+
+
+### fn spec.receivers.wechatConfigs.withToUser
+
+```ts
+withToUser(toUser)
+```
+
+
+
+## obj spec.receivers.wechatConfigs.apiSecret
+
+"The secret's key that contains the WeChat API key. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.wechatConfigs.apiSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.apiSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.apiSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig
+
+"HTTP client configuration."
+
+### fn spec.receivers.wechatConfigs.httpConfig.withProxyURL
+
+```ts
+withProxyURL(proxyURL)
+```
+
+"Optional proxy URL."
+
+## obj spec.receivers.wechatConfigs.httpConfig.basicAuth
+
+"BasicAuth for the client."
+
+## obj spec.receivers.wechatConfigs.httpConfig.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.receivers.wechatConfigs.httpConfig.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.httpConfig.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.receivers.wechatConfigs.httpConfig.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.httpConfig.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.bearerTokenSecret
+
+"The secret's key that contains the bearer token to be used by the client for authentication. The secret needs to be in the same namespace as the AlertmanagerConfig object and accessible by the Prometheus Operator."
+
+### fn spec.receivers.wechatConfigs.httpConfig.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.httpConfig.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig
+
+"TLS configuration for the client."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.receivers.wechatConfigs.httpConfig.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.receivers.wechatConfigs.httpConfig.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
 ## obj spec.route
 
 "The Alertmanager route definition for alerts matching the resource’s namespace. If present, it will be added to the generated Alertmanager configuration as a first-level route."
@@ -378,3 +4488,31 @@ withRoutesMixin(routes)
 "Child routes."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.route.matchers
+
+"List of matchers that the alert’s labels should match. For the first level route, the operator removes any existing equality and regexp matcher on the `namespace` label and adds a `namespace: <object namespace>` matcher."
+
+### fn spec.route.matchers.withName
+
+```ts
+withName(name)
+```
+
+"Label to match."
+
+### fn spec.route.matchers.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Whether to match on equality (false) or regular-expression (true)."
+
+### fn spec.route.matchers.withValue
+
+```ts
+withValue(value)
+```
+
+"Label value to match."

@@ -22,8 +22,6 @@ permalink: /0.9/monitoring/v1/probe/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -92,11 +90,25 @@ permalink: /0.9/monitoring/v1/probe/
         * [`fn withAny(any)`](#fn-spectargetsingressnamespaceselectorwithany)
         * [`fn withMatchNames(matchNames)`](#fn-spectargetsingressnamespaceselectorwithmatchnames)
         * [`fn withMatchNamesMixin(matchNames)`](#fn-spectargetsingressnamespaceselectorwithmatchnamesmixin)
+      * [`obj spec.targets.ingress.relabelingConfigs`](#obj-spectargetsingressrelabelingconfigs)
+        * [`fn withAction(action)`](#fn-spectargetsingressrelabelingconfigswithaction)
+        * [`fn withModulus(modulus)`](#fn-spectargetsingressrelabelingconfigswithmodulus)
+        * [`fn withRegex(regex)`](#fn-spectargetsingressrelabelingconfigswithregex)
+        * [`fn withReplacement(replacement)`](#fn-spectargetsingressrelabelingconfigswithreplacement)
+        * [`fn withSeparator(separator)`](#fn-spectargetsingressrelabelingconfigswithseparator)
+        * [`fn withSourceLabels(sourceLabels)`](#fn-spectargetsingressrelabelingconfigswithsourcelabels)
+        * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-spectargetsingressrelabelingconfigswithsourcelabelsmixin)
+        * [`fn withTargetLabel(targetLabel)`](#fn-spectargetsingressrelabelingconfigswithtargetlabel)
       * [`obj spec.targets.ingress.selector`](#obj-spectargetsingressselector)
         * [`fn withMatchExpressions(matchExpressions)`](#fn-spectargetsingressselectorwithmatchexpressions)
         * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-spectargetsingressselectorwithmatchexpressionsmixin)
         * [`fn withMatchLabels(matchLabels)`](#fn-spectargetsingressselectorwithmatchlabels)
         * [`fn withMatchLabelsMixin(matchLabels)`](#fn-spectargetsingressselectorwithmatchlabelsmixin)
+        * [`obj spec.targets.ingress.selector.matchExpressions`](#obj-spectargetsingressselectormatchexpressions)
+          * [`fn withKey(key)`](#fn-spectargetsingressselectormatchexpressionswithkey)
+          * [`fn withOperator(operator)`](#fn-spectargetsingressselectormatchexpressionswithoperator)
+          * [`fn withValues(values)`](#fn-spectargetsingressselectormatchexpressionswithvalues)
+          * [`fn withValuesMixin(values)`](#fn-spectargetsingressselectormatchexpressionswithvaluesmixin)
     * [`obj spec.targets.staticConfig`](#obj-spectargetsstaticconfig)
       * [`fn withLabels(labels)`](#fn-spectargetsstaticconfigwithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-spectargetsstaticconfigwithlabelsmixin)
@@ -104,6 +116,15 @@ permalink: /0.9/monitoring/v1/probe/
       * [`fn withRelabelingConfigsMixin(relabelingConfigs)`](#fn-spectargetsstaticconfigwithrelabelingconfigsmixin)
       * [`fn withStatic(static)`](#fn-spectargetsstaticconfigwithstatic)
       * [`fn withStaticMixin(static)`](#fn-spectargetsstaticconfigwithstaticmixin)
+      * [`obj spec.targets.staticConfig.relabelingConfigs`](#obj-spectargetsstaticconfigrelabelingconfigs)
+        * [`fn withAction(action)`](#fn-spectargetsstaticconfigrelabelingconfigswithaction)
+        * [`fn withModulus(modulus)`](#fn-spectargetsstaticconfigrelabelingconfigswithmodulus)
+        * [`fn withRegex(regex)`](#fn-spectargetsstaticconfigrelabelingconfigswithregex)
+        * [`fn withReplacement(replacement)`](#fn-spectargetsstaticconfigrelabelingconfigswithreplacement)
+        * [`fn withSeparator(separator)`](#fn-spectargetsstaticconfigrelabelingconfigswithseparator)
+        * [`fn withSourceLabels(sourceLabels)`](#fn-spectargetsstaticconfigrelabelingconfigswithsourcelabels)
+        * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-spectargetsstaticconfigrelabelingconfigswithsourcelabelsmixin)
+        * [`fn withTargetLabel(targetLabel)`](#fn-spectargetsstaticconfigrelabelingconfigswithtargetlabel)
   * [`obj spec.tlsConfig`](#obj-spectlsconfig)
     * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-spectlsconfigwithinsecureskipverify)
     * [`fn withServerName(serverName)`](#fn-spectlsconfigwithservername)
@@ -243,24 +264,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -754,6 +757,76 @@ withMatchNamesMixin(matchNames)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.targets.ingress.relabelingConfigs
+
+"RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+### fn spec.targets.ingress.relabelingConfigs.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on regex matching. Default is 'replace'"
+
+### fn spec.targets.ingress.relabelingConfigs.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values."
+
+### fn spec.targets.ingress.relabelingConfigs.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched. Default is '(.*)'"
+
+### fn spec.targets.ingress.relabelingConfigs.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'"
+
+### fn spec.targets.ingress.relabelingConfigs.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator placed between concatenated source label values. default is ';'."
+
+### fn spec.targets.ingress.relabelingConfigs.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+### fn spec.targets.ingress.relabelingConfigs.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.targets.ingress.relabelingConfigs.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available."
+
 ## obj spec.targets.ingress.selector
 
 "Select Ingress objects by labels."
@@ -791,6 +864,44 @@ withMatchLabelsMixin(matchLabels)
 ```
 
 "matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.targets.ingress.selector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.targets.ingress.selector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.targets.ingress.selector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.targets.ingress.selector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+### fn spec.targets.ingress.selector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -851,6 +962,76 @@ withStaticMixin(static)
 "Targets is a list of URLs to probe using the configured prober."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.targets.staticConfig.relabelingConfigs
+
+"RelabelConfigs to apply to samples before ingestion. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+### fn spec.targets.staticConfig.relabelingConfigs.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on regex matching. Default is 'replace'"
+
+### fn spec.targets.staticConfig.relabelingConfigs.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values."
+
+### fn spec.targets.staticConfig.relabelingConfigs.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched. Default is '(.*)'"
+
+### fn spec.targets.staticConfig.relabelingConfigs.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'"
+
+### fn spec.targets.staticConfig.relabelingConfigs.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator placed between concatenated source label values. default is ';'."
+
+### fn spec.targets.staticConfig.relabelingConfigs.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+### fn spec.targets.staticConfig.relabelingConfigs.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.targets.staticConfig.relabelingConfigs.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available."
 
 ## obj spec.tlsConfig
 

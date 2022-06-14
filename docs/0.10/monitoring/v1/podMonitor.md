@@ -22,8 +22,6 @@ permalink: /0.10/monitoring/v1/podMonitor/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,11 +44,113 @@ permalink: /0.10/monitoring/v1/podMonitor/
     * [`fn withAny(any)`](#fn-specnamespaceselectorwithany)
     * [`fn withMatchNames(matchNames)`](#fn-specnamespaceselectorwithmatchnames)
     * [`fn withMatchNamesMixin(matchNames)`](#fn-specnamespaceselectorwithmatchnamesmixin)
+  * [`obj spec.podMetricsEndpoints`](#obj-specpodmetricsendpoints)
+    * [`fn withHonorLabels(honorLabels)`](#fn-specpodmetricsendpointswithhonorlabels)
+    * [`fn withHonorTimestamps(honorTimestamps)`](#fn-specpodmetricsendpointswithhonortimestamps)
+    * [`fn withInterval(interval)`](#fn-specpodmetricsendpointswithinterval)
+    * [`fn withMetricRelabelings(metricRelabelings)`](#fn-specpodmetricsendpointswithmetricrelabelings)
+    * [`fn withMetricRelabelingsMixin(metricRelabelings)`](#fn-specpodmetricsendpointswithmetricrelabelingsmixin)
+    * [`fn withParams(params)`](#fn-specpodmetricsendpointswithparams)
+    * [`fn withParamsMixin(params)`](#fn-specpodmetricsendpointswithparamsmixin)
+    * [`fn withPath(path)`](#fn-specpodmetricsendpointswithpath)
+    * [`fn withPort(port)`](#fn-specpodmetricsendpointswithport)
+    * [`fn withProxyUrl(proxyUrl)`](#fn-specpodmetricsendpointswithproxyurl)
+    * [`fn withRelabelings(relabelings)`](#fn-specpodmetricsendpointswithrelabelings)
+    * [`fn withRelabelingsMixin(relabelings)`](#fn-specpodmetricsendpointswithrelabelingsmixin)
+    * [`fn withScheme(scheme)`](#fn-specpodmetricsendpointswithscheme)
+    * [`fn withScrapeTimeout(scrapeTimeout)`](#fn-specpodmetricsendpointswithscrapetimeout)
+    * [`fn withTargetPort(targetPort)`](#fn-specpodmetricsendpointswithtargetport)
+    * [`obj spec.podMetricsEndpoints.authorization`](#obj-specpodmetricsendpointsauthorization)
+      * [`fn withType(type)`](#fn-specpodmetricsendpointsauthorizationwithtype)
+      * [`obj spec.podMetricsEndpoints.authorization.credentials`](#obj-specpodmetricsendpointsauthorizationcredentials)
+        * [`fn withKey(key)`](#fn-specpodmetricsendpointsauthorizationcredentialswithkey)
+        * [`fn withName(name)`](#fn-specpodmetricsendpointsauthorizationcredentialswithname)
+        * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsauthorizationcredentialswithoptional)
+    * [`obj spec.podMetricsEndpoints.basicAuth`](#obj-specpodmetricsendpointsbasicauth)
+      * [`obj spec.podMetricsEndpoints.basicAuth.password`](#obj-specpodmetricsendpointsbasicauthpassword)
+        * [`fn withKey(key)`](#fn-specpodmetricsendpointsbasicauthpasswordwithkey)
+        * [`fn withName(name)`](#fn-specpodmetricsendpointsbasicauthpasswordwithname)
+        * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsbasicauthpasswordwithoptional)
+      * [`obj spec.podMetricsEndpoints.basicAuth.username`](#obj-specpodmetricsendpointsbasicauthusername)
+        * [`fn withKey(key)`](#fn-specpodmetricsendpointsbasicauthusernamewithkey)
+        * [`fn withName(name)`](#fn-specpodmetricsendpointsbasicauthusernamewithname)
+        * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsbasicauthusernamewithoptional)
+    * [`obj spec.podMetricsEndpoints.bearerTokenSecret`](#obj-specpodmetricsendpointsbearertokensecret)
+      * [`fn withKey(key)`](#fn-specpodmetricsendpointsbearertokensecretwithkey)
+      * [`fn withName(name)`](#fn-specpodmetricsendpointsbearertokensecretwithname)
+      * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsbearertokensecretwithoptional)
+    * [`obj spec.podMetricsEndpoints.metricRelabelings`](#obj-specpodmetricsendpointsmetricrelabelings)
+      * [`fn withAction(action)`](#fn-specpodmetricsendpointsmetricrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specpodmetricsendpointsmetricrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specpodmetricsendpointsmetricrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specpodmetricsendpointsmetricrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specpodmetricsendpointsmetricrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specpodmetricsendpointsmetricrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specpodmetricsendpointsmetricrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specpodmetricsendpointsmetricrelabelingswithtargetlabel)
+    * [`obj spec.podMetricsEndpoints.oauth2`](#obj-specpodmetricsendpointsoauth2)
+      * [`fn withEndpointParams(endpointParams)`](#fn-specpodmetricsendpointsoauth2withendpointparams)
+      * [`fn withEndpointParamsMixin(endpointParams)`](#fn-specpodmetricsendpointsoauth2withendpointparamsmixin)
+      * [`fn withScopes(scopes)`](#fn-specpodmetricsendpointsoauth2withscopes)
+      * [`fn withScopesMixin(scopes)`](#fn-specpodmetricsendpointsoauth2withscopesmixin)
+      * [`fn withTokenUrl(tokenUrl)`](#fn-specpodmetricsendpointsoauth2withtokenurl)
+      * [`obj spec.podMetricsEndpoints.oauth2.clientId`](#obj-specpodmetricsendpointsoauth2clientid)
+        * [`obj spec.podMetricsEndpoints.oauth2.clientId.configMap`](#obj-specpodmetricsendpointsoauth2clientidconfigmap)
+          * [`fn withKey(key)`](#fn-specpodmetricsendpointsoauth2clientidconfigmapwithkey)
+          * [`fn withName(name)`](#fn-specpodmetricsendpointsoauth2clientidconfigmapwithname)
+          * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsoauth2clientidconfigmapwithoptional)
+        * [`obj spec.podMetricsEndpoints.oauth2.clientId.secret`](#obj-specpodmetricsendpointsoauth2clientidsecret)
+          * [`fn withKey(key)`](#fn-specpodmetricsendpointsoauth2clientidsecretwithkey)
+          * [`fn withName(name)`](#fn-specpodmetricsendpointsoauth2clientidsecretwithname)
+          * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsoauth2clientidsecretwithoptional)
+      * [`obj spec.podMetricsEndpoints.oauth2.clientSecret`](#obj-specpodmetricsendpointsoauth2clientsecret)
+        * [`fn withKey(key)`](#fn-specpodmetricsendpointsoauth2clientsecretwithkey)
+        * [`fn withName(name)`](#fn-specpodmetricsendpointsoauth2clientsecretwithname)
+        * [`fn withOptional(optional)`](#fn-specpodmetricsendpointsoauth2clientsecretwithoptional)
+    * [`obj spec.podMetricsEndpoints.relabelings`](#obj-specpodmetricsendpointsrelabelings)
+      * [`fn withAction(action)`](#fn-specpodmetricsendpointsrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specpodmetricsendpointsrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specpodmetricsendpointsrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specpodmetricsendpointsrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specpodmetricsendpointsrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specpodmetricsendpointsrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specpodmetricsendpointsrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specpodmetricsendpointsrelabelingswithtargetlabel)
+    * [`obj spec.podMetricsEndpoints.tlsConfig`](#obj-specpodmetricsendpointstlsconfig)
+      * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specpodmetricsendpointstlsconfigwithinsecureskipverify)
+      * [`fn withServerName(serverName)`](#fn-specpodmetricsendpointstlsconfigwithservername)
+      * [`obj spec.podMetricsEndpoints.tlsConfig.ca`](#obj-specpodmetricsendpointstlsconfigca)
+        * [`obj spec.podMetricsEndpoints.tlsConfig.ca.configMap`](#obj-specpodmetricsendpointstlsconfigcaconfigmap)
+          * [`fn withKey(key)`](#fn-specpodmetricsendpointstlsconfigcaconfigmapwithkey)
+          * [`fn withName(name)`](#fn-specpodmetricsendpointstlsconfigcaconfigmapwithname)
+          * [`fn withOptional(optional)`](#fn-specpodmetricsendpointstlsconfigcaconfigmapwithoptional)
+        * [`obj spec.podMetricsEndpoints.tlsConfig.ca.secret`](#obj-specpodmetricsendpointstlsconfigcasecret)
+          * [`fn withKey(key)`](#fn-specpodmetricsendpointstlsconfigcasecretwithkey)
+          * [`fn withName(name)`](#fn-specpodmetricsendpointstlsconfigcasecretwithname)
+          * [`fn withOptional(optional)`](#fn-specpodmetricsendpointstlsconfigcasecretwithoptional)
+      * [`obj spec.podMetricsEndpoints.tlsConfig.cert`](#obj-specpodmetricsendpointstlsconfigcert)
+        * [`obj spec.podMetricsEndpoints.tlsConfig.cert.configMap`](#obj-specpodmetricsendpointstlsconfigcertconfigmap)
+          * [`fn withKey(key)`](#fn-specpodmetricsendpointstlsconfigcertconfigmapwithkey)
+          * [`fn withName(name)`](#fn-specpodmetricsendpointstlsconfigcertconfigmapwithname)
+          * [`fn withOptional(optional)`](#fn-specpodmetricsendpointstlsconfigcertconfigmapwithoptional)
+        * [`obj spec.podMetricsEndpoints.tlsConfig.cert.secret`](#obj-specpodmetricsendpointstlsconfigcertsecret)
+          * [`fn withKey(key)`](#fn-specpodmetricsendpointstlsconfigcertsecretwithkey)
+          * [`fn withName(name)`](#fn-specpodmetricsendpointstlsconfigcertsecretwithname)
+          * [`fn withOptional(optional)`](#fn-specpodmetricsendpointstlsconfigcertsecretwithoptional)
+      * [`obj spec.podMetricsEndpoints.tlsConfig.keySecret`](#obj-specpodmetricsendpointstlsconfigkeysecret)
+        * [`fn withKey(key)`](#fn-specpodmetricsendpointstlsconfigkeysecretwithkey)
+        * [`fn withName(name)`](#fn-specpodmetricsendpointstlsconfigkeysecretwithname)
+        * [`fn withOptional(optional)`](#fn-specpodmetricsendpointstlsconfigkeysecretwithoptional)
   * [`obj spec.selector`](#obj-specselector)
     * [`fn withMatchExpressions(matchExpressions)`](#fn-specselectorwithmatchexpressions)
     * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specselectorwithmatchexpressionsmixin)
     * [`fn withMatchLabels(matchLabels)`](#fn-specselectorwithmatchlabels)
     * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specselectorwithmatchlabelsmixin)
+    * [`obj spec.selector.matchExpressions`](#obj-specselectormatchexpressions)
+      * [`fn withKey(key)`](#fn-specselectormatchexpressionswithkey)
+      * [`fn withOperator(operator)`](#fn-specselectormatchexpressionswithoperator)
+      * [`fn withValues(values)`](#fn-specselectormatchexpressionswithvalues)
+      * [`fn withValuesMixin(values)`](#fn-specselectormatchexpressionswithvaluesmixin)
 
 ## Fields
 
@@ -165,24 +265,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -362,6 +444,708 @@ withMatchNamesMixin(matchNames)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.podMetricsEndpoints
+
+"A list of endpoints allowed as part of this PodMonitor."
+
+### fn spec.podMetricsEndpoints.withHonorLabels
+
+```ts
+withHonorLabels(honorLabels)
+```
+
+"HonorLabels chooses the metric's labels on collisions with target labels."
+
+### fn spec.podMetricsEndpoints.withHonorTimestamps
+
+```ts
+withHonorTimestamps(honorTimestamps)
+```
+
+"HonorTimestamps controls whether Prometheus respects the timestamps present in scraped data."
+
+### fn spec.podMetricsEndpoints.withInterval
+
+```ts
+withInterval(interval)
+```
+
+"Interval at which metrics should be scraped"
+
+### fn spec.podMetricsEndpoints.withMetricRelabelings
+
+```ts
+withMetricRelabelings(metricRelabelings)
+```
+
+"MetricRelabelConfigs to apply to samples before ingestion."
+
+### fn spec.podMetricsEndpoints.withMetricRelabelingsMixin
+
+```ts
+withMetricRelabelingsMixin(metricRelabelings)
+```
+
+"MetricRelabelConfigs to apply to samples before ingestion."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.withParams
+
+```ts
+withParams(params)
+```
+
+"Optional HTTP URL parameters"
+
+### fn spec.podMetricsEndpoints.withParamsMixin
+
+```ts
+withParamsMixin(params)
+```
+
+"Optional HTTP URL parameters"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.withPath
+
+```ts
+withPath(path)
+```
+
+"HTTP path to scrape for metrics."
+
+### fn spec.podMetricsEndpoints.withPort
+
+```ts
+withPort(port)
+```
+
+"Name of the pod port this endpoint refers to. Mutually exclusive with targetPort."
+
+### fn spec.podMetricsEndpoints.withProxyUrl
+
+```ts
+withProxyUrl(proxyUrl)
+```
+
+"ProxyURL eg http://proxyserver:2195 Directs scrapes to proxy through this endpoint."
+
+### fn spec.podMetricsEndpoints.withRelabelings
+
+```ts
+withRelabelings(relabelings)
+```
+
+"RelabelConfigs to apply to samples before scraping. Prometheus Operator automatically adds relabelings for a few standard Kubernetes fields and replaces original scrape job name with __tmp_prometheus_job_name. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+### fn spec.podMetricsEndpoints.withRelabelingsMixin
+
+```ts
+withRelabelingsMixin(relabelings)
+```
+
+"RelabelConfigs to apply to samples before scraping. Prometheus Operator automatically adds relabelings for a few standard Kubernetes fields and replaces original scrape job name with __tmp_prometheus_job_name. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.withScheme
+
+```ts
+withScheme(scheme)
+```
+
+"HTTP scheme to use for scraping."
+
+### fn spec.podMetricsEndpoints.withScrapeTimeout
+
+```ts
+withScrapeTimeout(scrapeTimeout)
+```
+
+"Timeout after which the scrape is ended"
+
+### fn spec.podMetricsEndpoints.withTargetPort
+
+```ts
+withTargetPort(targetPort)
+```
+
+"Deprecated: Use 'port' instead."
+
+## obj spec.podMetricsEndpoints.authorization
+
+"Authorization section for this endpoint"
+
+### fn spec.podMetricsEndpoints.authorization.withType
+
+```ts
+withType(type)
+```
+
+"Set the authentication type. Defaults to Bearer, Basic will cause an error"
+
+## obj spec.podMetricsEndpoints.authorization.credentials
+
+"The secret's key that contains the credentials of the request"
+
+### fn spec.podMetricsEndpoints.authorization.credentials.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.authorization.credentials.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.authorization.credentials.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.basicAuth
+
+"BasicAuth allow an endpoint to authenticate over basic authentication. More info: https://prometheus.io/docs/operating/configuration/#endpoint"
+
+## obj spec.podMetricsEndpoints.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.podMetricsEndpoints.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.podMetricsEndpoints.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.bearerTokenSecret
+
+"Secret to mount to read bearer token for scraping targets. The secret needs to be in the same namespace as the pod monitor and accessible by the Prometheus Operator."
+
+### fn spec.podMetricsEndpoints.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.metricRelabelings
+
+"MetricRelabelConfigs to apply to samples before ingestion."
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on regex matching. Default is 'replace'"
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values."
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched. Default is '(.*)'"
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'"
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator placed between concatenated source label values. default is ';'."
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.metricRelabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available."
+
+## obj spec.podMetricsEndpoints.oauth2
+
+"OAuth2 for the URL. Only valid in Prometheus versions 2.27.0 and newer."
+
+### fn spec.podMetricsEndpoints.oauth2.withEndpointParams
+
+```ts
+withEndpointParams(endpointParams)
+```
+
+"Parameters to append to the token URL"
+
+### fn spec.podMetricsEndpoints.oauth2.withEndpointParamsMixin
+
+```ts
+withEndpointParamsMixin(endpointParams)
+```
+
+"Parameters to append to the token URL"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.oauth2.withScopes
+
+```ts
+withScopes(scopes)
+```
+
+"OAuth2 scopes used for the token request"
+
+### fn spec.podMetricsEndpoints.oauth2.withScopesMixin
+
+```ts
+withScopesMixin(scopes)
+```
+
+"OAuth2 scopes used for the token request"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.oauth2.withTokenUrl
+
+```ts
+withTokenUrl(tokenUrl)
+```
+
+"The URL to fetch the token from"
+
+## obj spec.podMetricsEndpoints.oauth2.clientId
+
+"The secret or configmap containing the OAuth2 client id"
+
+## obj spec.podMetricsEndpoints.oauth2.clientId.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.podMetricsEndpoints.oauth2.clientId.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.podMetricsEndpoints.oauth2.clientId.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.oauth2.clientId.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.podMetricsEndpoints.oauth2.clientId.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.podMetricsEndpoints.oauth2.clientId.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.oauth2.clientId.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.oauth2.clientId.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.oauth2.clientSecret
+
+"The secret containing the OAuth2 client secret"
+
+### fn spec.podMetricsEndpoints.oauth2.clientSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.oauth2.clientSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.oauth2.clientSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.relabelings
+
+"RelabelConfigs to apply to samples before scraping. Prometheus Operator automatically adds relabelings for a few standard Kubernetes fields and replaces original scrape job name with __tmp_prometheus_job_name. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+### fn spec.podMetricsEndpoints.relabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on regex matching. Default is 'replace'"
+
+### fn spec.podMetricsEndpoints.relabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values."
+
+### fn spec.podMetricsEndpoints.relabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched. Default is '(.*)'"
+
+### fn spec.podMetricsEndpoints.relabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'"
+
+### fn spec.podMetricsEndpoints.relabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator placed between concatenated source label values. default is ';'."
+
+### fn spec.podMetricsEndpoints.relabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+### fn spec.podMetricsEndpoints.relabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podMetricsEndpoints.relabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available."
+
+## obj spec.podMetricsEndpoints.tlsConfig
+
+"TLS configuration to use when scraping the endpoint."
+
+### fn spec.podMetricsEndpoints.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.podMetricsEndpoints.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.podMetricsEndpoints.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.podMetricsEndpoints.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.podMetricsEndpoints.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.podMetricsEndpoints.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.podMetricsEndpoints.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.podMetricsEndpoints.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.podMetricsEndpoints.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.podMetricsEndpoints.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.podMetricsEndpoints.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.podMetricsEndpoints.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.podMetricsEndpoints.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.podMetricsEndpoints.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.podMetricsEndpoints.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.podMetricsEndpoints.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.podMetricsEndpoints.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
 ## obj spec.selector
 
 "Selector to select Pod objects."
@@ -399,5 +1183,43 @@ withMatchLabelsMixin(matchLabels)
 ```
 
 "matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.selector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.selector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.selector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.selector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+### fn spec.selector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values

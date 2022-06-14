@@ -22,8 +22,6 @@ permalink: /0.8/monitoring/v1/serviceMonitor/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,82 @@ permalink: /0.8/monitoring/v1/serviceMonitor/
   * [`fn withTargetLabels(targetLabels)`](#fn-specwithtargetlabels)
   * [`fn withTargetLabelsMixin(targetLabels)`](#fn-specwithtargetlabelsmixin)
   * [`fn withTargetLimit(targetLimit)`](#fn-specwithtargetlimit)
+  * [`obj spec.endpoints`](#obj-specendpoints)
+    * [`fn withBearerTokenFile(bearerTokenFile)`](#fn-specendpointswithbearertokenfile)
+    * [`fn withHonorLabels(honorLabels)`](#fn-specendpointswithhonorlabels)
+    * [`fn withHonorTimestamps(honorTimestamps)`](#fn-specendpointswithhonortimestamps)
+    * [`fn withInterval(interval)`](#fn-specendpointswithinterval)
+    * [`fn withMetricRelabelings(metricRelabelings)`](#fn-specendpointswithmetricrelabelings)
+    * [`fn withMetricRelabelingsMixin(metricRelabelings)`](#fn-specendpointswithmetricrelabelingsmixin)
+    * [`fn withParams(params)`](#fn-specendpointswithparams)
+    * [`fn withParamsMixin(params)`](#fn-specendpointswithparamsmixin)
+    * [`fn withPath(path)`](#fn-specendpointswithpath)
+    * [`fn withPort(port)`](#fn-specendpointswithport)
+    * [`fn withProxyUrl(proxyUrl)`](#fn-specendpointswithproxyurl)
+    * [`fn withRelabelings(relabelings)`](#fn-specendpointswithrelabelings)
+    * [`fn withRelabelingsMixin(relabelings)`](#fn-specendpointswithrelabelingsmixin)
+    * [`fn withScheme(scheme)`](#fn-specendpointswithscheme)
+    * [`fn withScrapeTimeout(scrapeTimeout)`](#fn-specendpointswithscrapetimeout)
+    * [`fn withTargetPort(targetPort)`](#fn-specendpointswithtargetport)
+    * [`obj spec.endpoints.basicAuth`](#obj-specendpointsbasicauth)
+      * [`obj spec.endpoints.basicAuth.password`](#obj-specendpointsbasicauthpassword)
+        * [`fn withKey(key)`](#fn-specendpointsbasicauthpasswordwithkey)
+        * [`fn withName(name)`](#fn-specendpointsbasicauthpasswordwithname)
+        * [`fn withOptional(optional)`](#fn-specendpointsbasicauthpasswordwithoptional)
+      * [`obj spec.endpoints.basicAuth.username`](#obj-specendpointsbasicauthusername)
+        * [`fn withKey(key)`](#fn-specendpointsbasicauthusernamewithkey)
+        * [`fn withName(name)`](#fn-specendpointsbasicauthusernamewithname)
+        * [`fn withOptional(optional)`](#fn-specendpointsbasicauthusernamewithoptional)
+    * [`obj spec.endpoints.bearerTokenSecret`](#obj-specendpointsbearertokensecret)
+      * [`fn withKey(key)`](#fn-specendpointsbearertokensecretwithkey)
+      * [`fn withName(name)`](#fn-specendpointsbearertokensecretwithname)
+      * [`fn withOptional(optional)`](#fn-specendpointsbearertokensecretwithoptional)
+    * [`obj spec.endpoints.metricRelabelings`](#obj-specendpointsmetricrelabelings)
+      * [`fn withAction(action)`](#fn-specendpointsmetricrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specendpointsmetricrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specendpointsmetricrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specendpointsmetricrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specendpointsmetricrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specendpointsmetricrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specendpointsmetricrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specendpointsmetricrelabelingswithtargetlabel)
+    * [`obj spec.endpoints.relabelings`](#obj-specendpointsrelabelings)
+      * [`fn withAction(action)`](#fn-specendpointsrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specendpointsrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specendpointsrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specendpointsrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specendpointsrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specendpointsrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specendpointsrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specendpointsrelabelingswithtargetlabel)
+    * [`obj spec.endpoints.tlsConfig`](#obj-specendpointstlsconfig)
+      * [`fn withCaFile(caFile)`](#fn-specendpointstlsconfigwithcafile)
+      * [`fn withCertFile(certFile)`](#fn-specendpointstlsconfigwithcertfile)
+      * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specendpointstlsconfigwithinsecureskipverify)
+      * [`fn withKeyFile(keyFile)`](#fn-specendpointstlsconfigwithkeyfile)
+      * [`fn withServerName(serverName)`](#fn-specendpointstlsconfigwithservername)
+      * [`obj spec.endpoints.tlsConfig.ca`](#obj-specendpointstlsconfigca)
+        * [`obj spec.endpoints.tlsConfig.ca.configMap`](#obj-specendpointstlsconfigcaconfigmap)
+          * [`fn withKey(key)`](#fn-specendpointstlsconfigcaconfigmapwithkey)
+          * [`fn withName(name)`](#fn-specendpointstlsconfigcaconfigmapwithname)
+          * [`fn withOptional(optional)`](#fn-specendpointstlsconfigcaconfigmapwithoptional)
+        * [`obj spec.endpoints.tlsConfig.ca.secret`](#obj-specendpointstlsconfigcasecret)
+          * [`fn withKey(key)`](#fn-specendpointstlsconfigcasecretwithkey)
+          * [`fn withName(name)`](#fn-specendpointstlsconfigcasecretwithname)
+          * [`fn withOptional(optional)`](#fn-specendpointstlsconfigcasecretwithoptional)
+      * [`obj spec.endpoints.tlsConfig.cert`](#obj-specendpointstlsconfigcert)
+        * [`obj spec.endpoints.tlsConfig.cert.configMap`](#obj-specendpointstlsconfigcertconfigmap)
+          * [`fn withKey(key)`](#fn-specendpointstlsconfigcertconfigmapwithkey)
+          * [`fn withName(name)`](#fn-specendpointstlsconfigcertconfigmapwithname)
+          * [`fn withOptional(optional)`](#fn-specendpointstlsconfigcertconfigmapwithoptional)
+        * [`obj spec.endpoints.tlsConfig.cert.secret`](#obj-specendpointstlsconfigcertsecret)
+          * [`fn withKey(key)`](#fn-specendpointstlsconfigcertsecretwithkey)
+          * [`fn withName(name)`](#fn-specendpointstlsconfigcertsecretwithname)
+          * [`fn withOptional(optional)`](#fn-specendpointstlsconfigcertsecretwithoptional)
+      * [`obj spec.endpoints.tlsConfig.keySecret`](#obj-specendpointstlsconfigkeysecret)
+        * [`fn withKey(key)`](#fn-specendpointstlsconfigkeysecretwithkey)
+        * [`fn withName(name)`](#fn-specendpointstlsconfigkeysecretwithname)
+        * [`fn withOptional(optional)`](#fn-specendpointstlsconfigkeysecretwithoptional)
   * [`obj spec.namespaceSelector`](#obj-specnamespaceselector)
     * [`fn withAny(any)`](#fn-specnamespaceselectorwithany)
     * [`fn withMatchNames(matchNames)`](#fn-specnamespaceselectorwithmatchnames)
@@ -50,6 +124,11 @@ permalink: /0.8/monitoring/v1/serviceMonitor/
     * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specselectorwithmatchexpressionsmixin)
     * [`fn withMatchLabels(matchLabels)`](#fn-specselectorwithmatchlabels)
     * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specselectorwithmatchlabelsmixin)
+    * [`obj spec.selector.matchExpressions`](#obj-specselectormatchexpressions)
+      * [`fn withKey(key)`](#fn-specselectormatchexpressionswithkey)
+      * [`fn withOperator(operator)`](#fn-specselectormatchexpressionswithoperator)
+      * [`fn withValues(values)`](#fn-specselectormatchexpressionswithvalues)
+      * [`fn withValuesMixin(values)`](#fn-specselectormatchexpressionswithvaluesmixin)
 
 ## Fields
 
@@ -164,24 +243,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -325,6 +386,564 @@ withTargetLimit(targetLimit)
 
 "TargetLimit defines a limit on the number of scraped targets that will be accepted."
 
+## obj spec.endpoints
+
+"A list of endpoints allowed as part of this ServiceMonitor."
+
+### fn spec.endpoints.withBearerTokenFile
+
+```ts
+withBearerTokenFile(bearerTokenFile)
+```
+
+"File to read bearer token for scraping targets."
+
+### fn spec.endpoints.withHonorLabels
+
+```ts
+withHonorLabels(honorLabels)
+```
+
+"HonorLabels chooses the metric's labels on collisions with target labels."
+
+### fn spec.endpoints.withHonorTimestamps
+
+```ts
+withHonorTimestamps(honorTimestamps)
+```
+
+"HonorTimestamps controls whether Prometheus respects the timestamps present in scraped data."
+
+### fn spec.endpoints.withInterval
+
+```ts
+withInterval(interval)
+```
+
+"Interval at which metrics should be scraped"
+
+### fn spec.endpoints.withMetricRelabelings
+
+```ts
+withMetricRelabelings(metricRelabelings)
+```
+
+"MetricRelabelConfigs to apply to samples before ingestion."
+
+### fn spec.endpoints.withMetricRelabelingsMixin
+
+```ts
+withMetricRelabelingsMixin(metricRelabelings)
+```
+
+"MetricRelabelConfigs to apply to samples before ingestion."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.endpoints.withParams
+
+```ts
+withParams(params)
+```
+
+"Optional HTTP URL parameters"
+
+### fn spec.endpoints.withParamsMixin
+
+```ts
+withParamsMixin(params)
+```
+
+"Optional HTTP URL parameters"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.endpoints.withPath
+
+```ts
+withPath(path)
+```
+
+"HTTP path to scrape for metrics."
+
+### fn spec.endpoints.withPort
+
+```ts
+withPort(port)
+```
+
+"Name of the service port this endpoint refers to. Mutually exclusive with targetPort."
+
+### fn spec.endpoints.withProxyUrl
+
+```ts
+withProxyUrl(proxyUrl)
+```
+
+"ProxyURL eg http://proxyserver:2195 Directs scrapes to proxy through this endpoint."
+
+### fn spec.endpoints.withRelabelings
+
+```ts
+withRelabelings(relabelings)
+```
+
+"RelabelConfigs to apply to samples before scraping. Prometheus Operator automatically adds relabelings for a few standard Kubernetes fields and replaces original scrape job name with __tmp_prometheus_job_name. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+### fn spec.endpoints.withRelabelingsMixin
+
+```ts
+withRelabelingsMixin(relabelings)
+```
+
+"RelabelConfigs to apply to samples before scraping. Prometheus Operator automatically adds relabelings for a few standard Kubernetes fields and replaces original scrape job name with __tmp_prometheus_job_name. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.endpoints.withScheme
+
+```ts
+withScheme(scheme)
+```
+
+"HTTP scheme to use for scraping."
+
+### fn spec.endpoints.withScrapeTimeout
+
+```ts
+withScrapeTimeout(scrapeTimeout)
+```
+
+"Timeout after which the scrape is ended"
+
+### fn spec.endpoints.withTargetPort
+
+```ts
+withTargetPort(targetPort)
+```
+
+"Name or number of the target port of the Pod behind the Service, the port must be specified with container port property. Mutually exclusive with port."
+
+## obj spec.endpoints.basicAuth
+
+"BasicAuth allow an endpoint to authenticate over basic authentication More info: https://prometheus.io/docs/operating/configuration/#endpoints"
+
+## obj spec.endpoints.basicAuth.password
+
+"The secret in the service monitor namespace that contains the password for authentication."
+
+### fn spec.endpoints.basicAuth.password.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.endpoints.basicAuth.password.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.basicAuth.password.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.endpoints.basicAuth.username
+
+"The secret in the service monitor namespace that contains the username for authentication."
+
+### fn spec.endpoints.basicAuth.username.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.endpoints.basicAuth.username.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.basicAuth.username.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.endpoints.bearerTokenSecret
+
+"Secret to mount to read bearer token for scraping targets. The secret needs to be in the same namespace as the service monitor and accessible by the Prometheus Operator."
+
+### fn spec.endpoints.bearerTokenSecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.endpoints.bearerTokenSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.bearerTokenSecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.endpoints.metricRelabelings
+
+"MetricRelabelConfigs to apply to samples before ingestion."
+
+### fn spec.endpoints.metricRelabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on regex matching. Default is 'replace'"
+
+### fn spec.endpoints.metricRelabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values."
+
+### fn spec.endpoints.metricRelabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched. Default is '(.*)'"
+
+### fn spec.endpoints.metricRelabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'"
+
+### fn spec.endpoints.metricRelabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator placed between concatenated source label values. default is ';'."
+
+### fn spec.endpoints.metricRelabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+### fn spec.endpoints.metricRelabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.endpoints.metricRelabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available."
+
+## obj spec.endpoints.relabelings
+
+"RelabelConfigs to apply to samples before scraping. Prometheus Operator automatically adds relabelings for a few standard Kubernetes fields and replaces original scrape job name with __tmp_prometheus_job_name. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config"
+
+### fn spec.endpoints.relabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on regex matching. Default is 'replace'"
+
+### fn spec.endpoints.relabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values."
+
+### fn spec.endpoints.relabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched. Default is '(.*)'"
+
+### fn spec.endpoints.relabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'"
+
+### fn spec.endpoints.relabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator placed between concatenated source label values. default is ';'."
+
+### fn spec.endpoints.relabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+### fn spec.endpoints.relabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.endpoints.relabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available."
+
+## obj spec.endpoints.tlsConfig
+
+"TLS configuration to use when scraping the endpoint"
+
+### fn spec.endpoints.tlsConfig.withCaFile
+
+```ts
+withCaFile(caFile)
+```
+
+"Path to the CA cert in the Prometheus container to use for the targets."
+
+### fn spec.endpoints.tlsConfig.withCertFile
+
+```ts
+withCertFile(certFile)
+```
+
+"Path to the client cert file in the Prometheus container for the targets."
+
+### fn spec.endpoints.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation."
+
+### fn spec.endpoints.tlsConfig.withKeyFile
+
+```ts
+withKeyFile(keyFile)
+```
+
+"Path to the client key file in the Prometheus container for the targets."
+
+### fn spec.endpoints.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.endpoints.tlsConfig.ca
+
+"Struct containing the CA cert to use for the targets."
+
+## obj spec.endpoints.tlsConfig.ca.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.endpoints.tlsConfig.ca.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.endpoints.tlsConfig.ca.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.tlsConfig.ca.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.endpoints.tlsConfig.ca.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.endpoints.tlsConfig.ca.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.endpoints.tlsConfig.ca.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.tlsConfig.ca.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.endpoints.tlsConfig.cert
+
+"Struct containing the client cert file for the targets."
+
+## obj spec.endpoints.tlsConfig.cert.configMap
+
+"ConfigMap containing data to use for the targets."
+
+### fn spec.endpoints.tlsConfig.cert.configMap.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.endpoints.tlsConfig.cert.configMap.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.tlsConfig.cert.configMap.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the ConfigMap or its key must be defined"
+
+## obj spec.endpoints.tlsConfig.cert.secret
+
+"Secret containing data to use for the targets."
+
+### fn spec.endpoints.tlsConfig.cert.secret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.endpoints.tlsConfig.cert.secret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.tlsConfig.cert.secret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
+## obj spec.endpoints.tlsConfig.keySecret
+
+"Secret containing the client key file for the targets."
+
+### fn spec.endpoints.tlsConfig.keySecret.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the secret to select from.  Must be a valid secret key."
+
+### fn spec.endpoints.tlsConfig.keySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+
+### fn spec.endpoints.tlsConfig.keySecret.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"Specify whether the Secret or its key must be defined"
+
 ## obj spec.namespaceSelector
 
 "Selector to select which namespaces the Endpoints objects are discovered from."
@@ -392,5 +1011,43 @@ withMatchLabelsMixin(matchLabels)
 ```
 
 "matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.selector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.selector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.selector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.selector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+### fn spec.selector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
