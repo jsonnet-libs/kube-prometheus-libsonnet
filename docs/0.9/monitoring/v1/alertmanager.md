@@ -667,6 +667,21 @@ permalink: /0.9/monitoring/v1/alertmanager/
             * [`fn withOperator(operator)`](#fn-specstoragevolumeclaimtemplatespecselectormatchexpressionswithoperator)
             * [`fn withValues(values)`](#fn-specstoragevolumeclaimtemplatespecselectormatchexpressionswithvalues)
             * [`fn withValuesMixin(values)`](#fn-specstoragevolumeclaimtemplatespecselectormatchexpressionswithvaluesmixin)
+      * [`obj spec.storage.volumeClaimTemplate.status`](#obj-specstoragevolumeclaimtemplatestatus)
+        * [`fn withAccessModes(accessModes)`](#fn-specstoragevolumeclaimtemplatestatuswithaccessmodes)
+        * [`fn withAccessModesMixin(accessModes)`](#fn-specstoragevolumeclaimtemplatestatuswithaccessmodesmixin)
+        * [`fn withCapacity(capacity)`](#fn-specstoragevolumeclaimtemplatestatuswithcapacity)
+        * [`fn withCapacityMixin(capacity)`](#fn-specstoragevolumeclaimtemplatestatuswithcapacitymixin)
+        * [`fn withConditions(conditions)`](#fn-specstoragevolumeclaimtemplatestatuswithconditions)
+        * [`fn withConditionsMixin(conditions)`](#fn-specstoragevolumeclaimtemplatestatuswithconditionsmixin)
+        * [`fn withPhase(phase)`](#fn-specstoragevolumeclaimtemplatestatuswithphase)
+        * [`obj spec.storage.volumeClaimTemplate.status.conditions`](#obj-specstoragevolumeclaimtemplatestatusconditions)
+          * [`fn withLastProbeTime(lastProbeTime)`](#fn-specstoragevolumeclaimtemplatestatusconditionswithlastprobetime)
+          * [`fn withLastTransitionTime(lastTransitionTime)`](#fn-specstoragevolumeclaimtemplatestatusconditionswithlasttransitiontime)
+          * [`fn withMessage(message)`](#fn-specstoragevolumeclaimtemplatestatusconditionswithmessage)
+          * [`fn withReason(reason)`](#fn-specstoragevolumeclaimtemplatestatusconditionswithreason)
+          * [`fn withStatus(status)`](#fn-specstoragevolumeclaimtemplatestatusconditionswithstatus)
+          * [`fn withType(type)`](#fn-specstoragevolumeclaimtemplatestatusconditionswithtype)
   * [`obj spec.tolerations`](#obj-spectolerations)
     * [`fn withEffect(effect)`](#fn-spectolerationswitheffect)
     * [`fn withKey(key)`](#fn-spectolerationswithkey)
@@ -5861,6 +5876,124 @@ withValuesMixin(values)
 "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.storage.volumeClaimTemplate.status
+
+"Status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims"
+
+### fn spec.storage.volumeClaimTemplate.status.withAccessModes
+
+```ts
+withAccessModes(accessModes)
+```
+
+"AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+
+### fn spec.storage.volumeClaimTemplate.status.withAccessModesMixin
+
+```ts
+withAccessModesMixin(accessModes)
+```
+
+"AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.storage.volumeClaimTemplate.status.withCapacity
+
+```ts
+withCapacity(capacity)
+```
+
+"Represents the actual resources of the underlying volume."
+
+### fn spec.storage.volumeClaimTemplate.status.withCapacityMixin
+
+```ts
+withCapacityMixin(capacity)
+```
+
+"Represents the actual resources of the underlying volume."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.storage.volumeClaimTemplate.status.withConditions
+
+```ts
+withConditions(conditions)
+```
+
+"Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'."
+
+### fn spec.storage.volumeClaimTemplate.status.withConditionsMixin
+
+```ts
+withConditionsMixin(conditions)
+```
+
+"Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.storage.volumeClaimTemplate.status.withPhase
+
+```ts
+withPhase(phase)
+```
+
+"Phase represents the current phase of PersistentVolumeClaim."
+
+## obj spec.storage.volumeClaimTemplate.status.conditions
+
+"Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'."
+
+### fn spec.storage.volumeClaimTemplate.status.conditions.withLastProbeTime
+
+```ts
+withLastProbeTime(lastProbeTime)
+```
+
+"Last time we probed the condition."
+
+### fn spec.storage.volumeClaimTemplate.status.conditions.withLastTransitionTime
+
+```ts
+withLastTransitionTime(lastTransitionTime)
+```
+
+"Last time the condition transitioned from one status to another."
+
+### fn spec.storage.volumeClaimTemplate.status.conditions.withMessage
+
+```ts
+withMessage(message)
+```
+
+"Human-readable message indicating details about last transition."
+
+### fn spec.storage.volumeClaimTemplate.status.conditions.withReason
+
+```ts
+withReason(reason)
+```
+
+"Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports \"ResizeStarted\" that means the underlying persistent volume is being resized."
+
+### fn spec.storage.volumeClaimTemplate.status.conditions.withStatus
+
+```ts
+withStatus(status)
+```
+
+
+
+### fn spec.storage.volumeClaimTemplate.status.conditions.withType
+
+```ts
+withType(type)
+```
+
+"PersistentVolumeClaimConditionType is a valid value of PersistentVolumeClaimCondition.Type"
 
 ## obj spec.tolerations
 
